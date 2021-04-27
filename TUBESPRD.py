@@ -20,11 +20,4 @@ for voltase in V1:
     print("Array dari voltase adalah", V1)
     break
 
-for v in range(V):
-    V2=int(input("Masukkan nilai voltase ke-{} (volt) : ".format(v+1)))
-    V1.append(V2)
-for voltase in V1:
-    print("Array dari voltase adalah", V1)
-    break
 
-#ini tubes prd semangatttt
