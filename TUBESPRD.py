@@ -68,7 +68,7 @@ print("""
 
 5. Rangkaian equivalent kelima
 
-    ______________(R2)____.________________.a      Keterangan:
+    _______________(R2)____________________.a      Keterangan:
    |        |                |      |              R1 = nilai resistor 1
    |       (R3)            (R4)     |              R2 = nilai resistor 2  
   (V1)      |________________|     (V3)            R3 = nilai resistor 3 
@@ -85,86 +85,101 @@ print("""
 while True:
     pilihan = int(input("Silakan Inputkan Nomor Rangkaian Yang Ingin Anda Selesaikan: "))
     if (pilihan==1):
-        print(""" Berikut bentuk rangkaian yang akan anda selesaikan
-    n1____(R1)____.____(R2)____.n-      Keterangan:
-    |            |                     R1 = nilai resistor 1
-    |            |                     R2 = nilai resistor 2
-    |           (R3)                   R3 = nilai resistor 3
-    |            |                     R4 = nilai resistor 4
-    (V)          |____________.n+      (V)= nilai tegangan sumber bebas
-    |            |
-    |           (R4)
-    |            |
-    |____________|""")
+        print()
+        print(""" 
+        ==========Berikut bentuk rangkaian yang akan anda selesaikan==========
+        ======================================================================
+
+       n1____(R1)____.____(R2)____.n-      Keterangan:
+        |            |                     R1 = nilai resistor 1
+        |            |                     R2 = nilai resistor 2
+        |           (R3)                   R3 = nilai resistor 3
+        |            |                     R4 = nilai resistor 4
+        (V)          |____________.n+      (V)= nilai tegangan sumber bebas
+        |            |
+        |           (R4)
+        |            |
+        |____________|
+        
+        ======================================================================
+        ======================================================================""")
+        break
 
     elif (pilihan==2):
-        print(""" Berikut bentuk rangkaian yang akan anda selesaikan
-    
-     ____(R1)____.____(R2)____.a      Keterangan:
-    |            |                    R1 = nilai resistor 1
-    |            |                    R2 = nilai resistor 2  
-    <V>          (R3)                  R3 = nilai resistor 3
-    |            |                    <v>= nilai tegangan sumber tidak bebas
-    |____________|____________.b
-        """)
+        print()
+        print(""" 
+        ==========Berikut bentuk rangkaian yang akan anda selesaikan===========
+        =======================================================================
+
+         ____(R1)____.____(R2)____.a      Keterangan:
+        |            |                    R1 = nilai resistor 1
+        |            |                    R2 = nilai resistor 2  
+        <V>          (R3)                 R3 = nilai resistor 3
+        |            |                    <v>= nilai tegangan sumber tidak bebas
+        |____________|____________.b
+        
+        ======================================================================
+        ======================================================================""")
+        break
 
     elif (pilihan==3):
+        print()
+        print(""" 
+        ============Berikut bentuk rangkaian yang akan anda selesaikan==========
+        ========================================================================
 
-        print(""" Berikut bentuk rangkaian yang akan anda selesaikan
-     ____(R1)____<V>__________.a      Keterangan:
-    |                   |             R1 = nilai resistor 1
-    |                   |             R2 = nilai resistor 2
-    (R2)                (R3)           R3 = nilai resistor 3
-    |                   |             <v>= nilai tegangan sumber tidak bebas
-    |___________________|_____.b
-        """)
+         ____(R1)____<V>__________.a      Keterangan:
+        |                   |             R1 = nilai resistor 1
+        |                   |             R2 = nilai resistor 2
+        (R2)                (R3)           R3 = nilai resistor 3
+        |                   |             <v>= nilai tegangan sumber tidak bebas
+        |___________________|_____.b
+         
+        =========================================================================
+        =========================================================================""")
+        break
 
     elif (pilihan==4):
-        print(""" Berikut bentuk rangkaian yang akan anda selesaikan
-        ____(R1)____.____(R2)____        Keterangan:
-    |            |            |       R1 = nilai resistor 1
-    |            a            |       R2 = nilai resistor 2  
-    (V)                       <V>      (V)= nilai tegangan sumber bebas
-    |            b            |       <v>= nilai tegangan sumber tidak bebas
-    |____________|____________|
-        """)
+        print()
+        print(""" 
+        ===========Berikut bentuk rangkaian yang akan anda selesaikan===========
+        ========================================================================
 
+         ____(R1)____.____(R2)____        Keterangan:
+        |            |            |       R1 = nilai resistor 1
+        |            a            |       R2 = nilai resistor 2  
+        (V)                       <V>     (V)= nilai tegangan sumber bebas
+        |            b            |       <v>= nilai tegangan sumber tidak bebas
+        |____________|____________|
+
+        ========================================================================
+        ========================================================================""")
+        break
     elif (pilihan==5):
-        print("""berikut bentuk rangkaian yang akan anda selesaikan
+        print()
+        print("""
+        ==========Berikut bentuk rangkaian yang akan anda selesaikan============
+        ========================================================================
+
+         ________________(R2)___________________.a      Keterangan:
+        |         |                |     |              R1 = nilai resistor 1
+        |       (R3)            (R4)     |              R2 = nilai resistor 2  
+        (V1)      |________________|     (V3)           R3 = nilai resistor 3 
+        |                |               |              R4 = nilai resistor 4 
+        |              (R5)              |              R5 = nilai resistor 5 
+        |                |               |              (V1)= nilai tegangan sumber bebas 1
+        (R1)             |              (R5)            (V2)= nilai tegangan sumber bebas 2
+        |              (V2)              |              (V3)= nilai tegangan sumber bebas 3
+        |________________|_______________|______.b
         
-        ______________(R2)____.________________.a      Keterangan:
-    |        |                |      |              R1 = nilai resistor 1
-    |       (R3)            (R4)     |              R2 = nilai resistor 2  
-    (V1)      |________________|     (V3)            R3 = nilai resistor 3 
-    |                |               |              R4 = nilai resistor 4 
-    |              (R5)              |              R5 = nilai resistor 5 
-    |                |               |              (V1)= nilai tegangan sumber bebas 1
-    (R1)              |              (R5)            (V2)= nilai tegangan sumber bebas 2
-    |              (V2)              |              (V3)= nilai tegangan sumber bebas 3
-    |________________|_______________|______.b
-        """)
+        ========================================================================
+        ========================================================================""")
+        break
+
     else:
         print()
         print("Masukan tidak valid, silakan pilih dari 1-5 rangkaian")
         
 
-jumlah_node = int(input("Masukkan jumlah node pada rangkaian: "))
-R = int(input("Masukkan jumlah resistor           : "))
-V = int(input("Masukkan jumlah voltase            : "))
-print()
-R1=[]
-V1=[]
-for r in range(R):
-    R2=int(input("Masukkan nilai resistor ke-{} (ohm) : ".format(r+1)))
-    R1.append(R2)
-for resistor in R1:
-    print("Array dari resistor adalah", R1)
-    break
-print()
-for v in range(V):
-    V2=int(input("Masukkan nilai voltase ke-{} (volt) : ".format(v+1)))
-    V1.append(V2)
-for voltase in V1:
-    print("Array dari voltase adalah", V1)
-    break
+
 
