@@ -169,11 +169,11 @@ if lanjut=="Y" or lanjut=="y":
       _______________(R2)____________________.a      Keterangan:
      |        |                |      |              R1 = nilai resistor 1
      |       (R3)            (R4)     |              R2 = nilai resistor 2  
-    (V1)     |________________|     (V3)             R3 = nilai resistor 3 
+    (V1)      |________________|     (V3)            R3 = nilai resistor 3 
      |                |               |              R4 = nilai resistor 4 
      |              (R5)              |              R5 = nilai resistor 5 
      |                |               |              (V1)= nilai tegangan sumber bebas 1
-    (R1)             |              (R5)             (V2)= nilai tegangan sumber bebas 2
+    (R1)              |              (R5)            (V2)= nilai tegangan sumber bebas 2
      |              (V2)              |              (V3)= nilai tegangan sumber bebas 3
      |________________|_______________|______.b
 
