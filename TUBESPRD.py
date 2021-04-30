@@ -1,7 +1,13 @@
-#Kodingan buat TUBES PRD
-#Baru inputnya doang gaess, belom kebayang implementasi rumus2nyaaa :nnnn
-
-
+"""
+ini adalah Tugas Besar Mata Kuliah Pengantar Rekayasa dan Desain PRD KU1202
+        Kelompok 4 yang membahas Equivalent Circuit Solver
+Anggota Kelompok:
+1. Febryola Kurnia Putri(16520050)
+2. Raki Fajar Rizki Andrawijaya(16520060)
+3. Tanya Nuhaisy Wulandari(16520080)
+4. Joshi Ryu Setiady(16520230)
+5. Syamira Rugayyah Alhaddad(16520250)
+ """  
     # Diambil dari : https://patorjk.com/software/taag/#p=display&f=Big&t=Kantong%20Ajaib
 print("""
 
@@ -114,7 +120,7 @@ n1____(R1)____.____(R2)____.n-      Keterangan:
         print("Silakan, Masukan Menu yang valid")
 
 lanjut = input("Apakah anda ingin melakukan simulasi rangkaian ini (Y/N): ")
-if lanjut=="Y":
+if lanjut=="Y" or lanjut=="y":
     print()
     print("""
 1. Rangkaian equivalent pertama
@@ -186,8 +192,8 @@ if lanjut=="Y":
           |            |                     R2 = nilai resistor 2
           |           (R3)                   R3 = nilai resistor 3
           |            |                     R4 = nilai resistor 4
-         (V)          |                     (V)= nilai tegangan sumber bebas
-          |            |
+         (V)           |                     (V)= nilai tegangan sumber 
+          |            |                          bebas
           |           (R4)
           |            |
           |____________|____________.n- 
@@ -350,7 +356,7 @@ if lanjut=="Y":
         else:
             print()
             print("Masukan tidak valid, silakan pilih dari 1-5 rangkaian")
-elif lanjut=="N":
+elif lanjut=="N" or lanjut=="n":
     print("""
 =====================TERIMA KASIH TELAH MELAKUKAN SIMULASI INI=======================
 =======================SILAKAN DICOBA KEMBALI DILAIN WAKTU===========================""")
