@@ -31,9 +31,9 @@ print("""
                 ╚═════╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝   ╚═╝  """)               
 print(Style.RESET_ALL)#MERESET WARNA PROGRAM
 nama = input("Masukan Nama Anda: ")
-print(Fore.CYAN+'')
-print("HALLO, "+str(nama))
 print()
+print("\033[36mHALLO, "+str(nama))
+print(Style.RESET_ALL)
 print(Fore.BLACK+""+ Back.WHITE+"") #MEMBERI WARNA
 print(" Selamat datang di program circuit equivalent pada program ini, kami akan ")
 print("   membantu anda untuk menemukan nilai Rth, Vth, dan Ith dari rangkaian   ") 
@@ -43,10 +43,10 @@ print("   Untuk itu, silakan pilih rangkaian yang anda butuhkan berikut terdapat
 print("  5 jenis rangkaian equivalent, silakan masukkan nomor yang sesuai dengan ")
 print("               gambar rangkaian yang anda butuhkan                        ") 
 print(Style.RESET_ALL)#MERESET WARNA PROGRAM
-print(Fore.LIGHTGREEN_EX+ "") #MEMBERI WARNA
-print("""=======================Silakan Pilih Menu di Bawah ini====================
-**************************************************************************""")
-print(Fore.WHITE+ "") #MEMBERI WARNA
+print()
+print("""\033[92m=======================Silakan Pilih Menu di Bawah ini====================
+**************************************************************************\033[0m""")
+print()
 print("=================Berikut Menu Yang Tersedia Pada Program Ini==============")
 print(Fore.BLACK+""+ Back.WHITE+"") #MEMBERI WARNA
 print("""1. Help (Petunjuk Sistem)
@@ -57,9 +57,9 @@ print("=========================================================================
 
 #PROGRAM UTAMA
 while True:
-    print(Fore.RED+'')
+    print(Fore.RED+"")
     menu = int(input("Masukan nomor menu yang ingin dilakukan: "))
-    print(Style.RESET_ALL)#MERESET WARNA PROGRAM
+    print(Style.RESET_ALL)
     if menu==1:
         print("""
 ==================Berikut Petunjuk Penggunaan Sistem Ini===============
@@ -77,21 +77,23 @@ while True:
         print()
         break
     elif menu==2:
-        print()
+        print(Fore.BLACK+""+Back.WHITE+"")
         print("""
-1. Rangkaian equivalent pertama
-
-n1____(R1)____.____(R2)____.n-      Keterangan:
+1. Rangkaian equivalent pertama""")
+        print(Style.RESET_ALL)
+        print("""
+ \033[41mn1\033[0m____\033[36m(R1)\033[0m____.____\033[36m(R2)\033[0m____.\033[41mn-\033[0m      Keterangan:
  |            |                     R1 = nilai resistor 1
  |            |                     R2 = nilai resistor 2
- |           (R3)                   R3 = nilai resistor 3
+ |           \033[36m(R3)\033[0m                   R3 = nilai resistor 3
  |            |                     R4 = nilai resistor 4
-(V)           |                     (V)= nilai tegangan sumber bebas
+ \033[93m(V)\033[0m           |                     (V)= nilai tegangan sumber bebas
  |            |
- |           (R4)
+ |           \033[36m(R4)\033[0m
  |            |
- |____________|____________.n+
-
+ |____________|____________.\033[41mn+\033[0m  """)
+        print()
+        print("""
 2. Rangkaian equivalent kedua
         
   ____(R1)____.____(R2)____.a      Keterangan:
@@ -140,21 +142,23 @@ n1____(R1)____.____(R2)____.n-      Keterangan:
 
 lanjut = input("Apakah anda ingin melakukan simulasi rangkaian ini (Y/N): ")
 if lanjut=="Y" or lanjut=="y":
-    print()
+    print(Fore.BLACK+""+Back.WHITE+"")
     print("""
-1. Rangkaian equivalent pertama
-
-    n1____(R1)____.____(R2)____.n-      Keterangan:
-     |            |                     R1 = nilai resistor 1
-     |            |                     R2 = nilai resistor 2
-     |           (R3)                   R3 = nilai resistor 3
-     |            |                     R4 = nilai resistor 4
-     (V)          |                     (V)= nilai tegangan sumber bebas
-     |            |
-     |           (R4)
-     |            |
-     |____________|____________.n+
-
+1. Rangkaian equivalent pertama""")
+    print(Style.RESET_ALL)
+    print("""
+     \033[41mn1\033[0m____\033[36m(R1)\033[0m____.____\033[36m(R2)\033[0m____.\033[41mn-\033[0m      Keterangan:
+      |            |                     R1 = nilai resistor 1
+      |            |                     R2 = nilai resistor 2
+      |           \033[36m(R3)\033[0m                   R3 = nilai resistor 3
+      |            |                     R4 = nilai resistor 4
+     \033[93m(V)\033[0m           |                     (V)= nilai tegangan sumber bebas
+      |            |
+      |           \033[36m(R4)\033[0m
+      |            |
+      |____________|____________.\033[41mn+\033[0m  """)
+    #Ga perlu diubah ya gaes yg udah aku edit please, di outputnya rapi kok
+    print("""
 2. Rangkaian equivalent kedua
         
       ____(R1)____.____(R2)____.a      Keterangan:
@@ -203,22 +207,21 @@ if lanjut=="Y" or lanjut=="y":
         if (pilihan==1):
             print()
             print(""" 
-==========Berikut bentuk rangkaian yang akan anda selesaikan==========
-======================================================================
+=============Berikut bentuk rangkaian yang akan anda selesaikan=============
+============================================================================
 
-         n1____(R1)____.____(R2)____.n+      Keterangan:
-          |            |                     R1 = nilai resistor 1
-          |            |                     R2 = nilai resistor 2
-          |           (R3)                   R3 = nilai resistor 3
-          |            |                     R4 = nilai resistor 4
-         (V)           |                     (V)= nilai tegangan sumber 
-          |            |                          bebas
-          |           (R4)
-          |            |
-          |____________|____________.n- 
-            
-======================================================================
-======================================================================""")
+     \033[41mn1\033[0m____\033[36m(R1)\033[0m____.____\033[36m(R2)\033[0m____.\033[41mn-\033[0m      Keterangan:
+      |            |                     R1 = nilai resistor 1
+      |            |                     R2 = nilai resistor 2
+      |           \033[36m(R3)\033[0m                   R3 = nilai resistor 3
+      |            |                     R4 = nilai resistor 4
+     \033[93m(V)\033[0m           |                     (V)= nilai tegangan sumber bebas
+      |            |
+      |           \033[36m(R4)\033[0m
+      |            |
+      |____________|____________.\033[41mn+\033[0m  
+============================================================================
+============================================================================""")
             print()
             R1=int(input("Masukan nilai resistor 1 (ohm): "))
             R2=int(input("Masukan nilai resistor 2 (ohm): "))
@@ -257,10 +260,10 @@ if lanjut=="Y" or lanjut=="y":
             print("""
 =======Bentuk rangkaian theveninnya akan menjadi seperti berikut======
 
-             ______(Rth)_______.n+
+             ______\033[36m(Rth)\033[0m_______.n+
             |
             |
-        (Vth)
+          \033[93m(Vth)\033[0m
             |
             |__________________.n-
 
