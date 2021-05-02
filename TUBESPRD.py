@@ -47,13 +47,13 @@ print()
 print("""\033[92m=======================Silakan Pilih Menu di Bawah ini====================
 **************************************************************************\033[0m""")
 print()
-print("=================Berikut Menu Yang Tersedia Pada Program Ini==============")
+print("==================Berikut Menu Yang Tersedia Pada Program Ini================")
 print(Fore.BLACK+""+ Back.WHITE+"") #MEMBERI WARNA
 print("""1. Help (Petunjuk Sistem)
 2. Simulasi Rangkaian    """) 
 print(Style.RESET_ALL +Fore.WHITE+ "")#MERESET WARNA PROGRAM
-print("**************************************************************************")
-print("==========================================================================")
+print("*****************************************************************************")
+print("=============================================================================")
 
 #PROGRAM UTAMA
 while True:
@@ -62,8 +62,8 @@ while True:
     print(Style.RESET_ALL)
     if menu==1:
         print("""
-==================Berikut Petunjuk Penggunaan Sistem Ini===============
-***********************************************************************
+==================Berikut Petunjuk Penggunaan Sistem Ini==================
+**************************************************************************
 
 1. Sistem ini adalah sistem yang dibuat untuk para engineer yang ingin
    menyelesaikan permasalahan mengenai equivalent circuit
@@ -72,8 +72,8 @@ while True:
 4. Hasil akhir dari program ini adalah berupa nilai Rth,Vth,dan Ith
 5. Setelah itu Program akan selesai
 
-***********************************************************************
-=======================================================================""")
+**************************************************************************
+==========================================================================""")
         print()
         break
     elif menu==2:
