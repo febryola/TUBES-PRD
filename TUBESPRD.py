@@ -47,13 +47,13 @@ print()
 print("""\033[92m=======================Silakan Pilih Menu di Bawah ini====================
 **************************************************************************\033[0m""")
 print()
-print("==================Berikut Menu Yang Tersedia Pada Program Ini================")
+print("================Berikut Menu Yang Tersedia Pada Program Ini===============")
 print(Fore.BLACK+""+ Back.WHITE+"") #MEMBERI WARNA
 print("""1. Help (Petunjuk Sistem)
 2. Simulasi Rangkaian    """) 
 print(Style.RESET_ALL +Fore.WHITE+ "")#MERESET WARNA PROGRAM
-print("*****************************************************************************")
-print("=============================================================================")
+print("**************************************************************************")
+print("==========================================================================")
 
 #PROGRAM UTAMA
 while True:
@@ -260,12 +260,12 @@ if lanjut=="Y" or lanjut=="y":
             print("""
 =======Bentuk rangkaian theveninnya akan menjadi seperti berikut======
 
-             ______\033[36m(Rth)\033[0m_______.n+
+             ______\033[36m(Rth)\033[0m_______.\033[41mn+\033[0m
             |
             |
           \033[93m(Vth)\033[0m
             |
-            |__________________.n-
+            |__________________.\033[41mn-\033[0m
 
 =======================================================================
             """)
