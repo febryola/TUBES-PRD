@@ -8,49 +8,54 @@ Anggota Kelompok:
 4. Joshi Ryu Setiady(16520230)
 5. Syamira Rugayyah Alhaddad(16520250)
  """  
-
-    # Diambil dari : https://patorjk.com/software/taag/#p=display&f=Big&t=Kantong%20Ajaib
-from colorama import init
+#LIBRARY YANG MEMBERIKAN WARNA PADA PROGRAM
+from colorama import init #Library untuk memberikan warna pada program
 init()
-
 from colorama import Fore, Back, Style
 
-
-print(Fore.BLUE +'███████╗ ██████╗ ██╗   ██╗██╗██╗   ██╗ █████╗ ██╗     ███████╗███╗   ██╗████████╗')  
-print(Fore.BLUE +'██╔════╝██╔═══██╗██║   ██║██║██║   ██║██╔══██╗██║     ██╔════╝████╗  ██║╚══██╔══╝')    
-print(Fore.BLUE +'█████╗  ██║   ██║██║   ██║██║██║   ██║███████║██║     █████╗  ██╔██╗ ██║   ██║   ')      
-print(Fore.BLUE +'██╔══╝  ██║▄▄ ██║██║   ██║██║╚██╗ ██╔╝██╔══██║██║     ██╔══╝  ██║╚██╗██║   ██║   ')     
-print(Fore.BLUE +'███████╗╚██████╔╝╚██████╔╝██║ ╚████╔╝ ██║  ██║███████╗███████╗██║ ╚████║   ██║   ')      
-print(Fore.BLUE +'╚══════╝ ╚══▀▀═╝  ╚═════╝ ╚═╝  ╚═══╝  ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ')     
-print() 
-print(Fore.BLUE +'                ██████╗██╗██████╗  ██████╗██╗   ██╗██╗████████╗ ')
-print(Fore.BLUE +'                ██╔════╝██║██╔══██╗██╔════╝██║   ██║██║╚══██╔══╝')
-print(Fore.BLUE +'                ██║     ██║██████╔╝██║     ██║   ██║██║   ██║   ')
-print(Fore.BLUE +'                ██║     ██║██╔══██╗██║     ██║   ██║██║   ██║   ')
-print(Fore.BLUE +'                 ╚██████╗██║██║  ██║╚██████╗╚██████╔╝██║   ██║  ')
-print(Fore.BLUE +'                 ╚═════╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝   ╚═╝   ')                
-
-print(Style.RESET_ALL)
+print(Fore.CYAN +'')
 print("""
-Selamat datang di program circuit equivalent pada program ini, kami akan
-membantu anda untuk menemukan nilai Rth, Vth, dan Ith dari rangkaian
-equivalent dengan menggunakan metode thevenin
 
-Untuk itu, silakan pilih rangkaian yang anda butuhkan berikut terdapat 
-5 jenis rangkaian equivalent, silakan masukkan nomor yang sesuai dengan 
-gambar rangkaian yang anda butuhkan""") 
+███████╗ ██████╗ ██╗   ██╗██╗██╗   ██╗ █████╗ ██╗     ███████╗███╗   ██╗████████╗ 
+██╔════╝██╔═══██╗██║   ██║██║██║   ██║██╔══██╗██║     ██╔════╝████╗  ██║╚══██╔══╝    
+█████╗  ██║   ██║██║   ██║██║██║   ██║███████║██║     █████╗  ██╔██╗ ██║   ██║        
+██╔══╝  ██║▄▄ ██║██║   ██║██║╚██╗ ██╔╝██╔══██║██║     ██╔══╝  ██║╚██╗██║   ██║       
+███████╗╚██████╔╝╚██████╔╝██║ ╚████╔╝ ██║  ██║███████╗███████╗██║ ╚████║   ██║        
+╚══════╝ ╚══▀▀═╝  ╚═════╝ ╚═╝  ╚═══╝  ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═══╝   ╚═╝        
 
-print("""
-=====================Silakan Pilih Menu di Bawah ini==================
-**********************************************************************""")
-print("""
-===============Berikut Menu Yang Tersedia Pada Program Ini============
-1. Help (Petunjuk Sistem)
-2. Simulasi Rangkaian
-====================================================================== """)
+                ██████╗██╗██████╗  ██████╗██╗   ██╗██╗████████╗ 
+                ██╔════╝██║██╔══██╗██╔════╝██║   ██║██║╚══██╔══╝
+                ██║     ██║██████╔╝██║     ██║   ██║██║   ██║   
+                ██║     ██║██╔══██╗██║     ██║   ██║██║   ██║   
+                ╚██████╗██║██║  ██║╚██████╗╚██████╔╝██║   ██║  
+                ╚═════╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝   ╚═╝  """)               
+print(Style.RESET_ALL)#MERESET WARNA PROGRAM
+print(Fore.BLACK+""+ Back.WHITE+"") #MEMBERI WARNA
+print(" Selamat datang di program circuit equivalent pada program ini, kami akan ")
+print("   membantu anda untuk menemukan nilai Rth, Vth, dan Ith dari rangkaian   ") 
+print("             equivalent dengan menggunakan metode thevenin                ") 
 print()
+print("   Untuk itu, silakan pilih rangkaian yang anda butuhkan berikut terdapat ")
+print("  5 jenis rangkaian equivalent, silakan masukkan nomor yang sesuai dengan ")
+print("               gambar rangkaian yang anda butuhkan                        ") 
+print(Style.RESET_ALL)#MERESET WARNA PROGRAM
+print(Fore.LIGHTGREEN_EX+ "") #MEMBERI WARNA
+print("""=====================Silakan Pilih Menu di Bawah ini==================
+**********************************************************************""")
+print(Fore.WHITE+ "") #MEMBERI WARNA
+print("===============Berikut Menu Yang Tersedia Pada Program Ini============")
+print(Fore.BLACK+""+ Back.WHITE+"") #MEMBERI WARNA
+print("""1. Help (Petunjuk Sistem)
+2. Simulasi Rangkaian    """) 
+print(Style.RESET_ALL +Fore.WHITE+ "")#MERESET WARNA PROGRAM
+print("**********************************************************************")
+print("======================================================================")
+
+#PROGRAM UTAMA
 while True:
+    print(Fore.RED+'')
     menu = int(input("Masukan nomor menu yang ingin dilakukan: "))
+    print(Style.RESET_ALL)#MERESET WARNA PROGRAM
     if menu==1:
         print("""
 ==================Berikut Petunjuk Penggunaan Sistem Ini===============
