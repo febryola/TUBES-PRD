@@ -1,6 +1,6 @@
 """
 ini adalah Tugas Besar Mata Kuliah Pengantar Rekayasa dan Desain PRD KU1202
-        Kelompok 4 yang membahas Equivalent Circuit Solver
+Kelompok 4 yang membahas Equivalent Circuit Solver
 Anggota Kelompok:
 1. Febryola Kurnia Putri(16520050)
 2. Raki Fajar Rizki Andrawijaya(16520060)
@@ -30,6 +30,10 @@ print("""
                 ╚██████╗██║██║  ██║╚██████╗╚██████╔╝██║   ██║  
                 ╚═════╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝   ╚═╝  """)               
 print(Style.RESET_ALL)#MERESET WARNA PROGRAM
+nama = input("Masukan Nama Anda: ")
+print(Fore.BLACK+''+Back.WHITE+''+Style.NORMAL +'')
+print("HALLO, "+str(nama))
+print()
 print(Fore.BLACK+""+ Back.WHITE+"") #MEMBERI WARNA
 print(" Selamat datang di program circuit equivalent pada program ini, kami akan ")
 print("   membantu anda untuk menemukan nilai Rth, Vth, dan Ith dari rangkaian   ") 
@@ -40,16 +44,16 @@ print("  5 jenis rangkaian equivalent, silakan masukkan nomor yang sesuai dengan
 print("               gambar rangkaian yang anda butuhkan                        ") 
 print(Style.RESET_ALL)#MERESET WARNA PROGRAM
 print(Fore.LIGHTGREEN_EX+ "") #MEMBERI WARNA
-print("""=====================Silakan Pilih Menu di Bawah ini==================
-**********************************************************************""")
+print("""=======================Silakan Pilih Menu di Bawah ini====================
+**************************************************************************""")
 print(Fore.WHITE+ "") #MEMBERI WARNA
-print("===============Berikut Menu Yang Tersedia Pada Program Ini============")
+print("=================Berikut Menu Yang Tersedia Pada Program Ini==============")
 print(Fore.BLACK+""+ Back.WHITE+"") #MEMBERI WARNA
 print("""1. Help (Petunjuk Sistem)
 2. Simulasi Rangkaian    """) 
 print(Style.RESET_ALL +Fore.WHITE+ "")#MERESET WARNA PROGRAM
-print("**********************************************************************")
-print("======================================================================")
+print("**************************************************************************")
+print("==========================================================================")
 
 #PROGRAM UTAMA
 while True:
