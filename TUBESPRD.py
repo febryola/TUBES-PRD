@@ -31,7 +31,7 @@ print("""
                 ╚═════╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝   ╚═╝  """)               
 print(Style.RESET_ALL)#MERESET WARNA PROGRAM
 nama = input("Masukan Nama Anda: ")
-print(Fore.BLACK+''+Back.WHITE+''+Style.NORMAL +'')
+print(Fore.CYAN+'')
 print("HALLO, "+str(nama))
 print()
 print(Fore.BLACK+""+ Back.WHITE+"") #MEMBERI WARNA
@@ -275,6 +275,18 @@ if lanjut=="Y" or lanjut=="y":
             print("""
 ***********************************************************************
 =======================PROGRAM ANDA TELAH SELESAI======================""")
+            print(Fore.LIGHTYELLOW_EX+"")
+            print("""
+            
+          ██████╗ ██╗   ██╗███████╗    ██████╗ ██╗   ██╗███████╗
+          ██╔══██╗╚██╗ ██╔╝██╔════╝    ██╔══██╗╚██╗ ██╔╝██╔════╝
+          ██████╔╝ ╚████╔╝ █████╗      ██████╔╝ ╚████╔╝ █████╗  
+          ██╔══██╗  ╚██╔╝  ██╔══╝      ██╔══██╗  ╚██╔╝  ██╔══╝  
+          ██████╔╝   ██║   ███████╗    ██████╔╝   ██║   ███████╗
+          ╚═════╝    ╚═╝   ╚══════╝    ╚═════╝    ╚═╝   ╚══════╝                                                   
+            """)
+            print(Style.RESET_ALL)
+        
             break
 
         elif (pilihan==2):
@@ -377,8 +389,19 @@ if lanjut=="Y" or lanjut=="y":
             print("Masukan tidak valid, silakan pilih dari 1-5 rangkaian")
 elif lanjut=="N" or lanjut=="n":
     print("""
-=====================TERIMA KASIH TELAH MELAKUKAN SIMULASI INI=======================
-=======================SILAKAN DICOBA KEMBALI DILAIN WAKTU===========================""")
+================TERIMA KASIH TELAH MELAKUKAN SIMULASI INI=================
+===================SILAKAN DICOBA KEMBALI DILAIN WAKTU====================""")
+    print(Fore.CYAN+"")
+    print("""
+    
+            ██████╗ ██╗   ██╗███████╗    ██████╗ ██╗   ██╗███████╗
+            ██╔══██╗╚██╗ ██╔╝██╔════╝    ██╔══██╗╚██╗ ██╔╝██╔════╝
+            ██████╔╝ ╚████╔╝ █████╗      ██████╔╝ ╚████╔╝ █████╗  
+            ██╔══██╗  ╚██╔╝  ██╔══╝      ██╔══██╗  ╚██╔╝  ██╔══╝  
+            ██████╔╝   ██║   ███████╗    ██████╔╝   ██║   ███████╗
+            ╚═════╝    ╚═╝   ╚══════╝    ╚═════╝    ╚═╝   ╚══════╝                                                   
+    """)
+    print(Style.RESET_ALL)
         
 
 
