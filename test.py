@@ -179,7 +179,7 @@ def program():
          ____(R1)____.____(R2)____.a      Keterangan:
         |            |                    R1 = nilai resistor 1
         |            |                    R2 = nilai resistor 2  
-        <V>          (R3)                 R3 = nilai resistor 3
+       <V>          (R3)                 R3 = nilai resistor 3
         |            |                    <v>= nilai tegangan sumber tidak bebas
         |____________|____________.b
             
@@ -188,7 +188,7 @@ def program():
          ____(R1)____<V>__________.a      Keterangan:
         |                   |             R1 = nilai resistor 1
         |                   |             R2 = nilai resistor 2
-        (R2)                (R3)          R3 = nilai resistor 3
+       (R2)                (R3)           R3 = nilai resistor 3
         |                   |             <v>= nilai tegangan sumber tidak bebas
         |___________________|_____.b
 
@@ -198,7 +198,7 @@ def program():
          ____(R1)____.____(R2)____        Keterangan:
         |            |            |       R1 = nilai resistor 1
         |            a            |       R2 = nilai resistor 2  
-        (V)                       <V>     (V)= nilai tegangan sumber bebas
+       (V)                       <V>     (V)= nilai tegangan sumber bebas
         |            b            |       <v>= nilai tegangan sumber tidak bebas
         |____________|____________|
 
@@ -207,11 +207,11 @@ def program():
          _______________(R2)____________________.a      Keterangan:
         |        |                |      |              R1 = nilai resistor 1
         |       (R3)            (R4)     |              R2 = nilai resistor 2  
-        (V1)      |________________|     (V3)           R3 = nilai resistor 3 
+       (V1)      |________________|     (V3)           R3 = nilai resistor 3 
         |                |               |              R4 = nilai resistor 4 
         |              (R5)              |              R5 = nilai resistor 5 
         |                |               |             (V1)= nilai tegangan sumber bebas 1
-        (R1)              |              (R5)          (V2)= nilai tegangan sumber bebas 2
+       (R1)              |              (R5)          (V2)= nilai tegangan sumber bebas 2
         |              (V2)              |             (V3)= nilai tegangan sumber bebas 3
         |________________|_______________|______.b
 
@@ -279,7 +279,7 @@ def program():
                  ______\033[36m(Rth)\033[0m_______.n+
                 |
                 |
-            \033[93m(Vth)\033[0m
+              \033[93m(Vth)\033[0m
                 |
                 |__________________.n-
 
