@@ -45,6 +45,19 @@ print("               gambar rangkaian yang anda butuhkan                       
 print(Style.RESET_ALL)#MERESET WARNA PROGRAM
 print()
 #FUNGSI UTAMA
+
+def byebye(): # Fungsi yang mengeluarkan pesan bye bye jika program telah selesai
+    print("""
+                    
+           ██████╗ ██╗   ██╗███████╗    ██████╗ ██╗   ██╗███████╗
+           ██╔══██╗╚██╗ ██╔╝██╔════╝    ██╔══██╗╚██╗ ██╔╝██╔════╝
+           ██████╔╝ ╚████╔╝ █████╗      ██████╔╝ ╚████╔╝ █████╗  
+           ██╔══██╗  ╚██╔╝  ██╔══╝      ██╔══██╗  ╚██╔╝  ██╔══╝  
+           ██████╔╝   ██║   ███████╗    ██████╔╝   ██║   ███████╗
+           ╚═════╝    ╚═╝   ╚══════╝    ╚═════╝    ╚═╝   ╚══════╝                                                   
+                    """)
+    print(Style.RESET_ALL)
+
 def program():
     print("""\033[92m=======================Silakan Pilih Menu di Bawah ini====================
 **************************************************************************\033[0m""")
@@ -282,7 +295,7 @@ def program():
                 b=input("Apakah Anda ingin melanjutkan program equivalent circuit ini? (Y/N): ")
                 if b=="Y" or b=="y":
                     print()
-                    program()
+                    program() #Memanggil kembali program utama
                     break
 
                 elif b=="N" or b=="n":
@@ -290,23 +303,14 @@ def program():
 ****************************************************************************
 =========================PROGRAM ANDA TELAH SELESAI=========================""")
                     print(Fore.LIGHTYELLOW_EX+"")
-                    print("""
-                    
-           ██████╗ ██╗   ██╗███████╗    ██████╗ ██╗   ██╗███████╗
-           ██╔══██╗╚██╗ ██╔╝██╔════╝    ██╔══██╗╚██╗ ██╔╝██╔════╝
-           ██████╔╝ ╚████╔╝ █████╗      ██████╔╝ ╚████╔╝ █████╗  
-           ██╔══██╗  ╚██╔╝  ██╔══╝      ██╔══██╗  ╚██╔╝  ██╔══╝  
-           ██████╔╝   ██║   ███████╗    ██████╔╝   ██║   ███████╗
-           ╚═════╝    ╚═╝   ╚══════╝    ╚═════╝    ╚═╝   ╚══════╝                                                   
-                    """)
-                    print(Style.RESET_ALL)
+                    byebye() #Mengeluarkan pesan bye bye ke sistem
                     break
 
             elif (pilihan==2):
                 print()
                 print(""" 
-==========Berikut bentuk rangkaian yang akan anda selesaikan===========
-=======================================================================
+============Berikut bentuk rangkaian yang akan anda selesaikan==============
+============================================================================
 
          ____(R1)____.____(R2)____.a      Keterangan:
         |            |                    R1 = nilai resistor 1
@@ -315,8 +319,8 @@ def program():
         |            |                    <v>= nilai tegangan sumber tidak bebas
         |____________|____________.b
                 
-======================================================================
-======================================================================""")
+===========================================================================
+===========================================================================""")
                 print()
                 R1=int(input("Masukan nilai resistor 1 (ohm): "))
                 R2=int(input("Masukan nilai resistor 2 (ohm): "))
@@ -327,8 +331,8 @@ def program():
             elif (pilihan==3):
                 print()
                 print(""" 
-============Berikut bentuk rangkaian yang akan anda selesaikan==========
-========================================================================
+==============Berikut bentuk rangkaian yang akan anda selesaikan============
+============================================================================
 
              ____(R1)____<V>__________.a      Keterangan:
             |                   |             R1 = nilai resistor 1
@@ -337,8 +341,8 @@ def program():
             |                   |             <v>= nilai tegangan sumber tidak 
             |___________________|_____.b           bebas
                 
-=========================================================================
-=========================================================================""")
+============================================================================
+============================================================================""")
                 print()
                 R1=int(input("Masukan nilai resistor 1 (ohm): "))
                 R2=int(input("Masukan nilai resistor 2 (ohm): "))
@@ -349,8 +353,8 @@ def program():
             elif (pilihan==4):
                 print()
                 print(""" 
-===========Berikut bentuk rangkaian yang akan anda selesaikan===========
-========================================================================
+==============Berikut bentuk rangkaian yang akan anda selesaikan============
+============================================================================
 
              ____(R1)____.____(R2)____     Keterangan:
             |            |            |    R1 = nilai resistor 1
@@ -359,8 +363,8 @@ def program():
             |            b            |    <v>= nilai tegangan sumber tidak
             |____________|____________|          bebas
 
-========================================================================
-========================================================================""")
+============================================================================
+============================================================================""")
                 print()
                 R1=int(input("Masukan nilai resistor 1 (ohm)         : "))
                 R2=int(input("Masukan nilai resistor 2 (ohm)         : "))
