@@ -239,11 +239,11 @@ def program():
 ============================================================================
 ============================================================================""")
                 print()
-                R1=int(input("Masukan nilai resistor 1 (ohm): "))
-                R2=int(input("Masukan nilai resistor 2 (ohm): "))
-                R3=int(input("Masukan nilai resistor 3 (ohm): "))
-                R4=int(input("Masukan nilai resistor 4 (ohm): "))
-                V=int(input("Masukan nilai voltase (volt)  : "))
+                R1=float(input("Masukan nilai resistor 1 (ohm): "))
+                R2=float(input("Masukan nilai resistor 2 (ohm): "))
+                R3=float(input("Masukan nilai resistor 3 (ohm): "))
+                R4=float(input("Masukan nilai resistor 4 (ohm): "))
+                V=float(input("Masukan nilai voltase (volt)  : "))
 
                 # Untuk Mencari Rth maka matikan sumber bebas sehingga didapatkan nilainya
                 # Rth dapat ditentukan dengan menggunakan prinsip seri paralel
@@ -322,10 +322,10 @@ def program():
 ===========================================================================
 ===========================================================================""")
                 print()
-                R1=int(input("Masukan nilai resistor 1 (ohm): "))
-                R2=int(input("Masukan nilai resistor 2 (ohm): "))
-                R3=int(input("Masukan nilai resistor 3 (ohm): "))
-                V=int(input("Masukan nilai voltase (volt)  : "))
+                R1=float(input("Masukan nilai resistor 1 (ohm): "))
+                R2=float(input("Masukan nilai resistor 2 (ohm): "))
+                R3=float(input("Masukan nilai resistor 3 (ohm): "))
+                V=float(input("Masukan nilai voltase (volt)  : "))
                 break
 
             elif (pilihan==3):
@@ -344,10 +344,10 @@ def program():
 ============================================================================
 ============================================================================""")
                 print()
-                R1=int(input("Masukan nilai resistor 1 (ohm): "))
-                R2=int(input("Masukan nilai resistor 2 (ohm): "))
-                R3=int(input("Masukan nilai resistor 3 (ohm): "))
-                V=int(input("Masukan nilai voltase (volt)  : "))
+                R1=float(input("Masukan nilai resistor 1 (ohm): "))
+                R2=float(input("Masukan nilai resistor 2 (ohm): "))
+                R3=float(input("Masukan nilai resistor 3 (ohm): "))
+                V=float(input("Masukan nilai voltase (volt)  : "))
                 break
 
             elif (pilihan==4):
@@ -366,10 +366,10 @@ def program():
 ============================================================================
 ============================================================================""")
                 print()
-                R1=int(input("Masukan nilai resistor 1 (ohm)         : "))
-                R2=int(input("Masukan nilai resistor 2 (ohm)         : "))
-                V1=int(input("Masukan nilai voltase bebas (volt)     : "))
-                V2=int(input("Masukan nilai voltase tidak bebas(volt): "))
+                R1=float(input("Masukan nilai resistor 1 (ohm)         : "))
+                R2=float(input("Masukan nilai resistor 2 (ohm)         : "))
+                V1=float(input("Masukan nilai voltase bebas (volt)     : "))
+                V2=float(input("Masukan nilai voltase tidak bebas(volt): "))
                 break
             elif (pilihan==5):
                 print()
@@ -391,14 +391,14 @@ def program():
 ===============================================================================================
 ===============================================================================================""")
                 print()
-                R1=int(input("Masukan nilai resistor 1 (ohm)   : "))
-                R2=int(input("Masukan nilai resistor 2 (ohm)   : "))
-                R3=int(input("Masukan nilai resistor 3 (ohm)   : "))
-                R4=int(input("Masukan nilai resistor 4 (ohm)   : "))
-                R5=int(input("Masukan nilai resistor 5 (ohm)   : "))
-                V1=int(input("Masukan nilai voltase 1 (volt)   : "))
-                V2=int(input("Masukan nilai voltase 2 (volt)   : "))
-                V3=int(input("Masukan nilai voltase 3 (volt)   : "))
+                R1=float(input("Masukan nilai resistor 1 (ohm)   : "))
+                R2=float(input("Masukan nilai resistor 2 (ohm)   : "))
+                R3=float(input("Masukan nilai resistor 3 (ohm)   : "))
+                R4=float(input("Masukan nilai resistor 4 (ohm)   : "))
+                R5=float(input("Masukan nilai resistor 5 (ohm)   : "))
+                V1=float(input("Masukan nilai voltase 1 (volt)   : "))
+                V2=float(input("Masukan nilai voltase 2 (volt)   : "))
+                V3=float(input("Masukan nilai voltase 3 (volt)   : "))
                 break
 
             else:
