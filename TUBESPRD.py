@@ -410,18 +410,8 @@ def program():
 ================TERIMA KASIH TELAH MELAKUKAN SIMULASI INI=================
 ===================SILAKAN DICOBA KEMBALI DILAIN WAKTU====================""")
         print(Fore.CYAN+"")
-        print("""
+        byebye() #Mencetak keluaran huruf byebye
         
-          ██████╗ ██╗   ██╗███████╗    ██████╗ ██╗   ██╗███████╗
-          ██╔══██╗╚██╗ ██╔╝██╔════╝    ██╔══██╗╚██╗ ██╔╝██╔════╝
-          ██████╔╝ ╚████╔╝ █████╗      ██████╔╝ ╚████╔╝ █████╗  
-          ██╔══██╗  ╚██╔╝  ██╔══╝      ██╔══██╗  ╚██╔╝  ██╔══╝  
-          ██████╔╝   ██║   ███████╗    ██████╔╝   ██║   ███████╗
-          ╚═════╝    ╚═╝   ╚══════╝    ╚═════╝    ╚═╝   ╚══════╝                                                   
-        """)
-        print(Style.RESET_ALL)
-        
-
 menu = input("Apakah Anda ingin melanjutkan ke bagian menu (Y/N): ")
 print()
 if menu == "Y" or menu == "y":
@@ -432,15 +422,6 @@ elif menu =="N" or menu=="n":
 ================TERIMA KASIH TELAH MELAKUKAN SIMULASI INI=================
 ===================SILAKAN DICOBA KEMBALI DILAIN WAKTU====================""")
     print(Fore.CYAN+"")
-    print("""
-        
-          ██████╗ ██╗   ██╗███████╗    ██████╗ ██╗   ██╗███████╗
-          ██╔══██╗╚██╗ ██╔╝██╔════╝    ██╔══██╗╚██╗ ██╔╝██╔════╝
-          ██████╔╝ ╚████╔╝ █████╗      ██████╔╝ ╚████╔╝ █████╗  
-          ██╔══██╗  ╚██╔╝  ██╔══╝      ██╔══██╗  ╚██╔╝  ██╔══╝  
-          ██████╔╝   ██║   ███████╗    ██████╔╝   ██║   ███████╗
-          ╚═════╝    ╚═╝   ╚══════╝    ╚═════╝    ╚═╝   ╚══════╝                                                   
-        """)
-    print(Style.RESET_ALL)
+    byebye() #Mencetak keluaran huruf byebye
 
 
