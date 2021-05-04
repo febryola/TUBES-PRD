@@ -422,7 +422,25 @@ def program():
         print(Style.RESET_ALL)
         
 
+menu = input("Apakah Anda ingin melanjutkan ke bagian menu (Y/N): ")
+print()
+if menu == "Y" or menu == "y":
 #Memanggil Program  
-program()
+    program()
+elif menu =="N" or menu=="n":
+    print("""
+================TERIMA KASIH TELAH MELAKUKAN SIMULASI INI=================
+===================SILAKAN DICOBA KEMBALI DILAIN WAKTU====================""")
+    print(Fore.CYAN+"")
+    print("""
+        
+          ██████╗ ██╗   ██╗███████╗    ██████╗ ██╗   ██╗███████╗
+          ██╔══██╗╚██╗ ██╔╝██╔════╝    ██╔══██╗╚██╗ ██╔╝██╔════╝
+          ██████╔╝ ╚████╔╝ █████╗      ██████╔╝ ╚████╔╝ █████╗  
+          ██╔══██╗  ╚██╔╝  ██╔══╝      ██╔══██╗  ╚██╔╝  ██╔══╝  
+          ██████╔╝   ██║   ███████╗    ██████╔╝   ██║   ███████╗
+          ╚═════╝    ╚═╝   ╚══════╝    ╚═════╝    ╚═╝   ╚══════╝                                                   
+        """)
+    print(Style.RESET_ALL)
 
 
