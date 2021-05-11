@@ -86,39 +86,49 @@ def rangkaian(): #Fungsi yang memanggil rangkaian
         |            |                    R2 = nilai resistor 2  
        \033[34m<V>\033[0m          \033[93m(R3)\033[0m                  R3 = nilai resistor 3
         |            |                    <v>= nilai tegangan sumber tidak bebas
-        |____________|____________.\033[41mb\033[0m
-            
-3. Rangkaian equivalent ketiga
+        |____________|____________.\033[41mb\033[0m """)
 
+    print(Fore.BLACK+""+Back.WHITE+"")
+    print("""
+3. Rangkaian equivalent ketiga""")
+    print(Style.RESET_ALL)
+    print("""
          ____\033[36m(R1)\033[0m____\033[34m<V>\033[0m__________.\033[41ma\033[0m      \033[93mKeterangan:\033[0m
         |                   |             R1 = nilai resistor 1
         |                   |             R2 = nilai resistor 2
        \033[36m(R2)\033[0m                \033[36m(R3)\033[0m           R3 = nilai resistor 3
         |                   |             <v>= nilai tegangan sumber tidak bebas
-        |___________________|_____.\033[41mb\033[0m
+        |___________________|_____.\033[41mb\033[0m """)
 
+    print(Fore.BLACK+""+Back.WHITE+"")
+    print("""
+4. Rangkaian equivalent keempat""")
+    print(Style.RESET_ALL)
+    print("""       
+             + V0 -
+         ____\033[36m(R1)\033[0m____.____\033[36m(R2)\033[0m____      \033[93mKeterangan:\033[0m
+        |            |            |    R1 = nilai resistor 1
+      + |            \033[41ma\033[0m            | +  R2 = nilai resistor 2  
+       \033[93m(V)\033[0m                       \033[34m<V>\033[0m   (V)= nilai tegangan sumber bebas
+      - |            \033[41mb\033[0m            | -  <v>= nilai tegangan sumber tidak
+        |____________|____________|          bebas (dalam unit V0)
+""")
 
-4. Rangkaian equivalent keempat
-            
-         ____\033[36m(R1)\033[0m____.____\033[36m(R2)\033[0m____        \033[93mKeterangan:\033[0m
-        |            |            |       R1 = nilai resistor 1
-        |            \033[41ma\033[0m            |       R2 = nilai resistor 2  
-       \033[93m(V)\033[0m                       \033[34m<V>\033[0m      (V)= nilai tegangan sumber bebas
-        |            \033[41mb\033[0m            |       <v>= nilai tegangan sumber tidak bebas
-        |____________|____________|
-
-5. Rangkaian equivalent kelima
-
-         _______________\033[36m(R2)\033[0m____________________.a      \033[93mKeterangan:\033[0m
+    print(Fore.BLACK+""+Back.WHITE+"")
+    print("""
+5. Rangkaian equivalent kelima""")
+    print(Style.RESET_ALL)
+    print("""
+         _______________\033[36m(R2)\033[0m____________________.\033[41ma\033[0m      \033[93mKeterangan:\033[0m
         |        |                |      |              R1 = nilai resistor 1
-        |       (R3)            (R4)     |              R2 = nilai resistor 2  
-       (V1)      |________________|     (V3)            R3 = nilai resistor 3 
+        |       \033[36m(R3)\033[0m            \033[36m(R4)\033[0m     |              R2 = nilai resistor 2  
+       \033[93m(V1)\033[0m      |________________|     \033[93m(V3)\033[0m            R3 = nilai resistor 3 
         |                |               |              R4 = nilai resistor 4 
-        |              (R5)              |              R5 = nilai resistor 5 
+        |              \033[36m(R5)\033[0m              |              R5 = nilai resistor 5 
         |                |               |              R6 = nilai resistor 6
-       (R1)              |              (R6)           (V1)= nilai tegangan sumber bebas 1
-        |              (V2)              |             (V2)= nilai tegangan sumber bebas 2
-        |________________|_______________|______.b     (V3)= nilai tegangan sumber bebas 3
+       \033[36m(R1)\033[0m              |              \033[36m(R6)\033[0m           (V1)= nilai tegangan sumber bebas 1
+        |              \033[93m(V2)\033[0m              |             (V2)= nilai tegangan sumber bebas 2
+        |________________|_______________|______.\033[41mb\033[0m     (V3)= nilai tegangan sumber bebas 3
 
         """)
 
@@ -282,13 +292,12 @@ def program():
 ============Berikut bentuk rangkaian yang akan anda selesaikan==============
 ============================================================================
 
-         ____(R1)____.____(R2)____.a      Keterangan:
+         ____\033[36m(R1)\033[0m____.____\033[36m(R2)\033[0m____.\033[41ma\033[0m      \033[93mKeterangan:\033[0m
         |            |                    R1 = nilai resistor 1
         |            |                    R2 = nilai resistor 2  
-       <V>          (R3)                  R3 = nilai resistor 3
+       \033[34m<V>\033[0m          \033[93m(R3)\033[0m                  R3 = nilai resistor 3
         |            |                    <v>= nilai tegangan sumber tidak bebas
-        |____________|____________.b
-                
+        |____________|____________.\033[41mb\033[0m 
 ===========================================================================
 ===========================================================================""")
                 print()
@@ -303,14 +312,12 @@ def program():
                 print(""" 
 ==============Berikut bentuk rangkaian yang akan anda selesaikan============
 ============================================================================
-
-             ____(R1)____<V>__________.a      Keterangan:
-            |                   |             R1 = nilai resistor 1
-            |                   |             R2 = nilai resistor 2
-           (R2)                (R3)           R3 = nilai resistor 3
-            |                   |             <v>= nilai tegangan sumber tidak 
-            |___________________|_____.b           bebas
-                
+         ____\033[36m(R1)\033[0m____\033[34m<V>\033[0m__________.\033[41ma\033[0m      \033[93mKeterangan:\033[0m
+        |                   |             R1 = nilai resistor 1
+        |                   |             R2 = nilai resistor 2
+       \033[36m(R2)\033[0m                \033[36m(R3)\033[0m           R3 = nilai resistor 3
+        |                   |             <v>= nilai tegangan sumber tidak bebas
+        |___________________|_____.\033[41mb\033[0m
 ============================================================================
 ============================================================================""")
                 print()
@@ -327,11 +334,11 @@ def program():
 ============================================================================
 
                 + V0 -
-             ____(R1)____.____(R2)____     Keterangan:
+             ____\033[36m(R1)\033[0m____.____\033[36mm(R2)\033[0m____      \033[93mKeterangan:\033[0m
             |            |            |    R1 = nilai resistor 1
-          + |            a            | +  R2 = nilai resistor 2  
-           (V)                       <V>   (V)= nilai tegangan sumber bebas
-          - |            b            | -  <v>= nilai tegangan sumber tidak
+          + |            \033[41ma\033[0m            | +  R2 = nilai resistor 2  
+           \033[93m(V)\033[0m                       \033[34m<V>\033[0m   (V)= nilai tegangan sumber bebas
+          - |            \033[41mb\033[0m            | -  <v>= nilai tegangan sumber tidak
             |____________|____________|          bebas (dalam unit V0)
 
 ============================================================================
@@ -412,16 +419,16 @@ def program():
 =======================Berikut bentuk rangkaian yang akan anda selesaikan=====================
 ==============================================================================================
 
-                 ________________(R2)___________________.a      Keterangan:
-                |         |                |     |              R1 = nilai resistor 1
-                |       (R3)            (R4)     |              R2 = nilai resistor 2  
-               (V1)       |________________|    (V3)            R3 = nilai resistor 3 
-                |                |               |              R4 = nilai resistor 4 
-                |              (R5)              |              R5 = nilai resistor 5 
-                |                |               |             (V1)= nilai tegangan sumber bebas 1
-              (R1)               |              (R5)           (V2)= nilai tegangan sumber bebas 2
-                |              (V2)              |             (V3)= nilai tegangan sumber bebas 3
-                |________________|_______________|______.b
+         _______________\033[36m(R2)\033[0m____________________.\033[41ma\033[0m      \033[93mKeterangan:\033[0m
+        |        |                |      |              R1 = nilai resistor 1
+        |       \033[36m(R3)\033[0m            \033[36m(R4)\033[0m     |              R2 = nilai resistor 2  
+       \033[93m(V1)\033[0m      |________________|     \033[93m(V3)\033[0m            R3 = nilai resistor 3 
+        |                |               |              R4 = nilai resistor 4 
+        |              \033[36m(R5)\033[0m              |              R5 = nilai resistor 5 
+        |                |               |              R6 = nilai resistor 6
+       \033[36m(R1)\033[0m              |              \033[36m(R6)\033[0m           (V1)= nilai tegangan sumber bebas 1
+        |              \033[93m(V2)\033[0m              |             (V2)= nilai tegangan sumber bebas 2
+        |________________|_______________|______.\033[41mb\033[0m     (V3)= nilai tegangan sumber bebas 3
                 
 ===============================================================================================
 ===============================================================================================""")
