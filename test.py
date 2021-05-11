@@ -78,9 +78,9 @@ def rangkaian(): #Fungsi yang memanggil rangkaian
             
          ____(R1)____.____(R2)____.a      Keterangan:
         |            |                    R1 = nilai resistor 1
-        |            |                    R2 = nilai resistor 2  
-       <V>          (R3)                  R3 = nilai resistor 3
-        |            |                    <v>= nilai tegangan sumber tidak bebas
+        |            |   |                R2 = nilai resistor 2  
+       <V>          (R3) | Ix             R3 = nilai resistor 3
+        |            |   V                <v>= nilai tegangan sumber tidak bebas (dalam unit Ix)
         |____________|____________.b
             
 3. Rangkaian equivalent ketiga
@@ -259,10 +259,10 @@ def program():
 
          ____(R1)____.____(R2)____.a      Keterangan:
         |            |                    R1 = nilai resistor 1
-        |            |                    R2 = nilai resistor 2  
-       <V>          (R3)                  R3 = nilai resistor 3
-        |            |                    <v>= nilai tegangan sumber tidak bebas
-        |____________|____________.b
+      + |            |    |               R2 = nilai resistor 2  
+       <V>          (R3)  | Ix            R3 = nilai resistor 3
+      - |            |    V               <v>= nilai tegangan sumber tidak bebas (dalam unit Ix)
+        |____________|____________.b      *perhatikan arah arus dan letak positif negatif dari sumber tegangan
                 
 ===========================================================================
 ===========================================================================""")
@@ -270,8 +270,55 @@ def program():
                 R1=float(input("Masukan nilai resistor 1 (ohm): "))
                 R2=float(input("Masukan nilai resistor 2 (ohm): "))
                 R3=float(input("Masukan nilai resistor 3 (ohm): "))
+                print("Untuk voltase, hanya masukkan nilai X pada X*Ix (X berupa bilangan)")
                 V=float(input("Masukan nilai voltase (volt)  : "))
-                break
+
+                # Untuk Mencari Rth maka kita mengasumsi terdapat sumber tegangan independen berupa 1 V pada titik a b
+                # Lalu kita mencari nilai V di titik antara R1 dan R2 untuk mencari nilai arus pada sumber tegangan independen tersebut
+                # Saat nilai arus tersebut didapat, kita dapat mencari nilai Rth rangkaian tersebut
+                # Maka berikut penyelesaiannya
+                Vy = (R1*R3) / (R2*R3-R2*V+R1*R2+R1*R3)   # rumus diturunkan pada laporan
+                I0 = (1-Vy) / R2
+                Rth = 1 / I0
+
+                # Nilai Vth rangkaian tersebut 0 karena tidak ada sumber tegangan independen
+                Vth = 0
+
+                # Karena nilai Vth nya adalah 0, maka Ith akan bernilai 0 juga
+                Ith = 0
+
+                print("""
+==========Bentuk rangkaian theveninnya akan menjadi seperti berikut=========
+
+                 ______(Rth)_______.n+
+                |
+                |
+              (Vth)
+                |
+                |__________________.n-
+
+============================================================================
+                """)
+                print("""
+==========Berikut hasil thevenin dari rangkaian equivalent di atas==========""")
+                print()
+                print("Nilai R theveninnya adalah", Rth, "ohm")
+                print("Nilai V theveninnya adalah", float(Vth), "volt")
+                print("Nilai I theveninnya adalah", float(Ith), "Ampere")
+                print()
+                b=input("Apakah Anda ingin melanjutkan program equivalent circuit ini? (Y/N): ")
+                if b=="Y" or b=="y":
+                    print()
+                    program() #Memanggil kembali program utama
+                    break
+
+                elif b=="N" or b=="n":
+                    print("""
+****************************************************************************
+=========================PROGRAM ANDA TELAH SELESAI=========================""")
+                    print(Fore.LIGHTYELLOW_EX+"") #memberikan warna kuning pada huruf byebye
+                    byebye() #Mengeluarkan pesan bye bye ke sistem
+                    break
 
             elif (pilihan==3):
                 print()
