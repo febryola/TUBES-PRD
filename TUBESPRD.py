@@ -64,7 +64,7 @@ def rangkaian(): #Fungsi yang memanggil rangkaian
 1. Rangkaian equivalent pertama""")
     print(Style.RESET_ALL)
     print("""
-       \033[41mn1\033[0m____\033[36m(R1)\033[0m____.____\033[36m(R2)\033[0m____.\033[41mn-\033[0m      Keterangan:
+       \033[41mn1\033[0m____\033[36m(R1)\033[0m____.____\033[36m(R2)\033[0m____.\033[41mn-\033[0m      \033[93mKeterangan:\033[0m
         |            |                     R1 = nilai resistor 1
         |            |                     R2 = nilai resistor 2
         |           \033[36m(R3)\033[0m                   R3 = nilai resistor 3
@@ -75,59 +75,80 @@ def rangkaian(): #Fungsi yang memanggil rangkaian
         |            |
         |____________|____________.\033[41mn+\033[0m  """)
         #Ga perlu diubah ya gaes yg udah aku edit please, di outputnya rapi kok
+    print(Fore.BLACK+""+Back.WHITE+"")
     print("""
-2. Rangkaian equivalent kedua
+2. Rangkaian equivalent kedua""")
+    print(Style.RESET_ALL)
+    print("""
             
-         ____(R1)____.____(R2)____.a      Keterangan:
+         ____\033[36m(R1)\033[0m____.____\033[36m(R2)\033[0m____.\033[41ma\033[0m      \033[93mKeterangan:\033[0m
         |            |                    R1 = nilai resistor 1
         |            |                    R2 = nilai resistor 2  
-       <V>          (R3)                  R3 = nilai resistor 3
+       \033[34m<V>\033[0m          \033[93m(R3)\033[0m                  R3 = nilai resistor 3
         |            |                    <v>= nilai tegangan sumber tidak bebas
-        |____________|____________.b
+        |____________|____________.\033[41mb\033[0m
             
 3. Rangkaian equivalent ketiga
 
-         ____(R1)____<V>__________.a      Keterangan:
+         ____\033[36m(R1)\033[0m____\033[34m<V>\033[0m__________.\033[41ma\033[0m      \033[93mKeterangan:\033[0m
         |                   |             R1 = nilai resistor 1
         |                   |             R2 = nilai resistor 2
-       (R2)                (R3)           R3 = nilai resistor 3
+       \033[36m(R2)\033[0m                \033[36m(R3)\033[0m           R3 = nilai resistor 3
         |                   |             <v>= nilai tegangan sumber tidak bebas
-        |___________________|_____.b
+        |___________________|_____.\033[41mb\033[0m
 
 
 4. Rangkaian equivalent keempat
             
-         ____(R1)____.____(R2)____        Keterangan:
+         ____\033[36m(R1)\033[0m____.____\033[36m(R2)\033[0m____        \033[93mKeterangan:\033[0m
         |            |            |       R1 = nilai resistor 1
-        |            a            |       R2 = nilai resistor 2  
-       (V)                       <V>      (V)= nilai tegangan sumber bebas
-        |            b            |       <v>= nilai tegangan sumber tidak bebas
+        |            \033[41ma\033[0m            |       R2 = nilai resistor 2  
+       \033[93m(V)\033[0m                       \033[34m<V>\033[0m      (V)= nilai tegangan sumber bebas
+        |            \033[41mb\033[0m            |       <v>= nilai tegangan sumber tidak bebas
         |____________|____________|
 
 5. Rangkaian equivalent kelima
 
-         _______________(R2)____________________.a      Keterangan:
+         _______________\033[36m(R2)\033[0m____________________.a      \033[93mKeterangan:\033[0m
         |        |                |      |              R1 = nilai resistor 1
         |       (R3)            (R4)     |              R2 = nilai resistor 2  
        (V1)      |________________|     (V3)            R3 = nilai resistor 3 
         |                |               |              R4 = nilai resistor 4 
         |              (R5)              |              R5 = nilai resistor 5 
-        |                |               |             (V1)= nilai tegangan sumber bebas 1
-       (R1)              |              (R5)           (V2)= nilai tegangan sumber bebas 2
-        |              (V2)              |             (V3)= nilai tegangan sumber bebas 3
-        |________________|_______________|______.b
+        |                |               |              R6 = nilai resistor 6
+       (R1)              |              (R6)           (V1)= nilai tegangan sumber bebas 1
+        |              (V2)              |             (V2)= nilai tegangan sumber bebas 2
+        |________________|_______________|______.b     (V3)= nilai tegangan sumber bebas 3
 
         """)
 
+def aboutus():
+    print("""
+\033[34m@@@@@@@@@@@@@@@@@@@@@@@\033[0m Ini adalah Program Kami \033[34m@@@@@@@@@@@@@@@@@@@@@@@@@@\033[0m
+\033[34m@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\033[0m
 
+siapa kami?
+
+Kelompok 4 PRD K24 2020/2021:
+1. Febryola Kurnia Putri panggil aja \033[93mYOLA\033[0m
+2. Raki Fajar Rizki Andrawijaya panggil aja \033[34mRAKI\033[0m
+3. Tanya Nuhaisy Wulandari panggil aja \033[31mANYA\033[0m
+4. Joshi Ryu Setiady panggil aja \033[92mJOSHI\033[0m
+5. Syamira Rugayyah Alhaddad panggil aja \033[36mSYAMIRA\033[0m
+
+\033[34m@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\033[0m
+\033[34m@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\033[0m
+
+    """)
 def program():
     print("""\033[92m=======================Silakan Pilih Menu di Bawah ini====================
 **************************************************************************\033[0m""")
     print()
     print("=================Berikut Menu Yang Tersedia Pada Program Ini==============")
     print(Fore.BLACK+""+ Back.WHITE+"") #MEMBERI WARNA
-    print("""1. Help (Petunjuk Sistem)
-2. Simulasi Rangkaian    """) 
+    print("""1. Help (Petunjuk Sistem);
+2. Simulasi Rangkaian    ;
+3. About Us              .""") 
     print(Style.RESET_ALL +Fore.WHITE+ "")#MERESET WARNA PROGRAM
     print("**************************************************************************")
     print("==========================================================================")
@@ -155,6 +176,9 @@ def program():
             break
         elif menu==2:
             rangkaian()
+            break
+        elif menu==3:
+            aboutus()
             break
         else:
             print("Silakan, Masukan Menu yang valid")
@@ -222,21 +246,21 @@ def program():
                 print("""
 ==========Bentuk rangkaian theveninnya akan menjadi seperti berikut=========
 
-                 ______\033[36m(Rth)\033[0m_______.n+
+                 ______\033[36m(Rth)\033[0m_______.\033[41mn+\033[0m
                 |
                 |
               \033[93m(Vth)\033[0m
                 |
-                |__________________.n-
+                |__________________.\033[41mn-\033[0m
 
 ============================================================================
                 """)
                 print("""
 ==========Berikut hasil thevenin dari rangkaian equivalent di atas==========""")
                 print()
-                print("Nilai R theveninnya adalah", Rth, "ohm")
-                print("Nilai V theveninnya adalah", Vth, "volt")
-                print("Nilai I theveninnya adalah", Ith, "Ampere")
+                print("Nilai \033[93mR theveninnya\033[0m adalah", Rth, "ohm")
+                print("Nilai \033[36mV theveninnya\033[0m adalah", Vth, "volt")
+                print("Nilai \033[91mI theveninnya\033[0m adalah", Ith, "Ampere")
                 print()
                 b=input("Apakah Anda ingin melanjutkan program equivalent circuit ini? (Y/N): ")
                 if b=="Y" or b=="y":
@@ -302,12 +326,13 @@ def program():
 ==============Berikut bentuk rangkaian yang akan anda selesaikan============
 ============================================================================
 
+                + V0 -
              ____(R1)____.____(R2)____     Keterangan:
             |            |            |    R1 = nilai resistor 1
-            |            a            |    R2 = nilai resistor 2  
+          + |            a            | +  R2 = nilai resistor 2  
            (V)                       <V>   (V)= nilai tegangan sumber bebas
-            |            b            |    <v>= nilai tegangan sumber tidak
-            |____________|____________|          bebas
+          - |            b            | -  <v>= nilai tegangan sumber tidak
+            |____________|____________|          bebas (dalam unit V0)
 
 ============================================================================
 ============================================================================""")
@@ -315,8 +340,72 @@ def program():
                 R1=float(input("Masukan nilai resistor 1 (ohm)         : "))
                 R2=float(input("Masukan nilai resistor 2 (ohm)         : "))
                 V1=float(input("Masukan nilai voltase bebas (volt)     : "))
-                V2=float(input("Masukan nilai voltase tidak bebas(volt): "))
-                break
+                Vd=float(input("Masukan nilai voltase tidak bebas (V0) : "))
+                
+                # Nilai Vth didapatkan dengan cara sebagai berikut
+                # Mencari nilai I dengan menggunakan prinsip KVL Pada loop luar
+                # -V1 + I * R1 + I * R2 + V2 = 0
+                # substitusikan nilai V2 = Vd * R1 * I
+                # -V1 + I * R1 + I * R2 + Vd * R1 * I = 0
+                # -V1 + I * (R1 + R2 + Vd * R1) = 0
+                # I = V1 / (R1 + R2 + Vd * R1)
+                # Gunakan nilai I tersebut dalam KVL pada loop kiri
+                # -V1 + (R1 * I) + Vth = 0
+                # Vth = V1 - (R1 * I)
+                I = V1 / (R1 + R2 + (Vd * R1))
+                Vth = V1 - (R1 * I)
+
+                # Untuk menentukan R theveninnya
+                # Hilangkan sumber tegangan independen dan letakkan sumber tegangan uji bernilai 1V di ab
+                V0 = -1 # besar V0 sama dengan besar sumber tegangan uji karena paralel
+                Vd = 4 * V0
+                Ia = -V0 / R1
+                # Mencari Ib menggunakan KVL pada loop luar
+                # -Ia * R1 + Ib * R2 + Vd = 0
+                # substitusikan -Ia * R1 = V0
+                # V0 + Ib * R2 + Vd = 0
+                # Ib = (-V0 - Vd) / R2
+                Ib = (-V0 - Vd) / R2
+                # Cari besar arus yang dikeluarkan oleh sumber tegangan uji (I0)
+                I0 = Ia + Ib
+                # cari R thevenin menggunakan rumus Rth = 1 / I0
+                Rth = 1/I0
+
+                # Mencari Ith menggunakan rumus Ith = Vth / Rth
+                Ith = Vth / Rth
+
+                print("""
+==========Bentuk rangkaian theveninnya akan menjadi seperti berikut=========
+
+                 ______\033[36m(Rth)\033[0m_______.\033[41mn+\033[0m
+                |
+                |
+              \033[93m(Vth)\033[0m
+                |
+                |__________________.\033[41mn-\033[0m
+
+============================================================================
+                """)
+                print("""
+==========Berikut hasil thevenin dari rangkaian equivalent di atas==========""")
+                print()
+                print("Nilai \033[93mR theveninnya\033[0m adalah", Rth, "ohm")
+                print("Nilai \033[36mV theveninnya\033[0m adalah", Vth, "volt")
+                print("Nilai \033[91mI theveninnya\033[0m adalah", Ith, "Ampere")
+                print()
+                b=input("Apakah Anda ingin melanjutkan program equivalent circuit ini? (Y/N): ")
+                if b=="Y" or b=="y":
+                    print()
+                    program() #Memanggil kembali program utama
+                    break
+
+                elif b=="N" or b=="n":
+                    print("""
+****************************************************************************
+=========================PROGRAM ANDA TELAH SELESAI=========================""")
+                    print(Fore.LIGHTYELLOW_EX+"") #memberikan warna kuning pada huruf byebye
+                    byebye() #Mengeluarkan pesan bye bye ke sistem
+                    break
             elif (pilihan==5):
                 print()
                 print("""

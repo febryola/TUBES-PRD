@@ -59,23 +59,21 @@ def byebye(): # Fungsi yang mengeluarkan pesan bye bye jika program telah selesa
     print(Style.RESET_ALL)
 
 def rangkaian(): #Fungsi yang memanggil rangkaian
-    print(Fore.BLACK+""+Back.WHITE+"")
+ 
     print("""
-1. Rangkaian equivalent pertama""")
-    print(Style.RESET_ALL)
-    print("""
-       \033[41mn1\033[0m____\033[36m(R1)\033[0m____.____\033[36m(R2)\033[0m____.\033[41mn-\033[0m      Keterangan:
+1. Rangkaian equivalent pertama
+    
+       n1____(R1)____.____(R2)____.n-      Keterangan:
         |            |                     R1 = nilai resistor 1
         |            |                     R2 = nilai resistor 2
-        |           \033[36m(R3)\033[0m                   R3 = nilai resistor 3
+        |          (R3)                    R3 = nilai resistor 3
         |            |                     R4 = nilai resistor 4
-       \033[93m(V)\033[0m           |                     (V)= nilai tegangan sumber bebas
+       (V)           |                     (V)= nilai tegangan sumber bebas
         |            |
-        |           \033[36m(R4)\033[0m
+        |          (R4)
         |            |
-        |____________|____________.\033[41mn+\033[0m  """)
-        #Ga perlu diubah ya gaes yg udah aku edit please, di outputnya rapi kok
-    print("""
+        |____________|____________.n+ 
+    
 2. Rangkaian equivalent kedua
             
          ____(R1)____.____(R2)____.a      Keterangan:
@@ -112,10 +110,10 @@ def rangkaian(): #Fungsi yang memanggil rangkaian
        (V1)      |________________|     (V3)            R3 = nilai resistor 3 
         |                |               |              R4 = nilai resistor 4 
         |              (R5)              |              R5 = nilai resistor 5 
-        |                |               |             (V1)= nilai tegangan sumber bebas 1
-       (R1)              |              (R5)           (V2)= nilai tegangan sumber bebas 2
-        |              (V2)              |             (V3)= nilai tegangan sumber bebas 3
-        |________________|_______________|______.b
+        |                |               |              R6 = nilai resistor 6
+       (R1)              |              (R6)           (V1)= nilai tegangan sumber bebas 1
+        |              (V2)              |             (V2)= nilai tegangan sumber bebas 2
+        |________________|_______________|______.b     (V3)= nilai tegangan sumber bebas 3
 
         """)
 
@@ -170,17 +168,18 @@ def program():
                 print(""" 
 =============Berikut bentuk rangkaian yang akan anda selesaikan=============
 ============================================================================
-
-       \033[41mn1\033[0m____\033[36m(R1)\033[0m____.____\033[36m(R2)\033[0m____.\033[41mn-\033[0m      Keterangan:
+    
+       n1____(R1)____.____(R2)____.n-      Keterangan:
         |            |                     R1 = nilai resistor 1
         |            |                     R2 = nilai resistor 2
-        |           \033[36m(R3)\033[0m                   R3 = nilai resistor 3
+        |          (R3)                    R3 = nilai resistor 3
         |            |                     R4 = nilai resistor 4
-       \033[93m(V)\033[0m           |                     (V)= nilai tegangan sumber bebas
+       (V)           |                     (V)= nilai tegangan sumber bebas
         |            |
-        |           \033[36m(R4)\033[0m
+        |          (R4)
         |            |
-        |____________|____________.\033[41mn+\033[0m  
+        |____________|____________.n+ 
+    
 
 ============================================================================
 ============================================================================""")
@@ -222,10 +221,10 @@ def program():
                 print("""
 ==========Bentuk rangkaian theveninnya akan menjadi seperti berikut=========
 
-                 ______\033[36m(Rth)\033[0m_______.n+
+                 ______(Rth)_______.n+
                 |
                 |
-              \033[93m(Vth)\033[0m
+              (Vth)
                 |
                 |__________________.n-
 
@@ -353,10 +352,10 @@ def program():
                 print("""
 ==========Bentuk rangkaian theveninnya akan menjadi seperti berikut=========
 
-                 ______\033[36m(Rth)\033[0m_______.n+
+                 ______(Rth)_______.n+
                 |
                 |
-              \033[93m(Vth)\033[0m
+              (Vth)
                 |
                 |__________________.n-
 
@@ -388,17 +387,17 @@ def program():
                 print("""
 =======================Berikut bentuk rangkaian yang akan anda selesaikan=====================
 ==============================================================================================
-
-                 ________________(R2)___________________.a      Keterangan:
-                |         |                |     |              R1 = nilai resistor 1
-                |       (R3)            (R4)     |              R2 = nilai resistor 2  
-               (V1)       |________________|    (V3)            R3 = nilai resistor 3 
-                |                |               |              R4 = nilai resistor 4 
-                |              (R5)              |              R5 = nilai resistor 5 
-                |                |               |             (V1)= nilai tegangan sumber bebas 1
-              (R1)               |              (R5)           (V2)= nilai tegangan sumber bebas 2
-                |              (V2)              |             (V3)= nilai tegangan sumber bebas 3
-                |________________|_______________|______.b
+           
+         _______________(R2)____________________.a      Keterangan:
+        |        |                |      |              R1 = nilai resistor 1
+        |       (R3)            (R4)     |              R2 = nilai resistor 2  
+       (V1)      |________________|     (V3)            R3 = nilai resistor 3 
+        |                |               |              R4 = nilai resistor 4 
+        |              (R5)              |              R5 = nilai resistor 5 
+        |                |               |              R6 = nilai resistor 6
+       (R1)              |              (R6)           (V1)= nilai tegangan sumber bebas 1
+        |              (V2)              |             (V2)= nilai tegangan sumber bebas 2
+        |________________|_______________|______.b     (V3)= nilai tegangan sumber bebas 3
                 
 ===============================================================================================
 ===============================================================================================""")
