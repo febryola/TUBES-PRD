@@ -85,22 +85,24 @@ def rangkaian(): #Fungsi yang memanggil rangkaian
             
 3. Rangkaian equivalent ketiga
 
-         ____(R1)____<V>__________.a      Keterangan:
-        |                   |             R1 = nilai resistor 1
-        |                   |             R2 = nilai resistor 2
-       (R2)                (R3)           R3 = nilai resistor 3
-        |                   |             <v>= nilai tegangan sumber tidak bebas
-        |___________________|_____.b
-
+                     X.Vx
+             ____(R1)____<V>__________.a      Keterangan:
+            |                   |             R1 = nilai resistor 1
+           +|                  +|             R2 = nilai resistor 2
+        Vx (R2)                (R3)           R3 = nilai resistor 3
+           -|                  -|             <v>= nilai tegangan sumber tidak 
+            |___________________|_____.b           bebas
+                
 
 4. Rangkaian equivalent keempat
             
-         ____(R1)____.____(R2)____        Keterangan:
-        |            |            |       R1 = nilai resistor 1
-        |            a            |       R2 = nilai resistor 2  
-       (V)                       <V>      (V)= nilai tegangan sumber bebas
-        |            b            |       <v>= nilai tegangan sumber tidak bebas
-        |____________|____________|
+                 + V0 -
+             ____(R1)____.____(R2)____     Keterangan:
+            |            |            |    R1 = nilai resistor 1
+          + |            a            | +  R2 = nilai resistor 2  
+           (V)                       <V>   (V)= nilai tegangan sumber bebas
+          - |            b            | -  <v>= nilai tegangan sumber tidak
+            |____________|____________|          bebas (dalam unit V0)
 
 5. Rangkaian equivalent kelima
 

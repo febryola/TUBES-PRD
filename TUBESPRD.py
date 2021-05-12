@@ -81,26 +81,26 @@ def rangkaian(): #Fungsi yang memanggil rangkaian
 2. Rangkaian equivalent kedua""")
     print(Style.RESET_ALL)
     print("""
-            
          ____\033[36m(R1)\033[0m____.____\033[36m(R2)\033[0m____.\033[41ma\033[0m      \033[93mKeterangan:\033[0m
         |            |                    R1 = nilai resistor 1
-        |            |                    R2 = nilai resistor 2  
-       \033[34m<V>\033[0m          \033[93m(R3)\033[0m                  R3 = nilai resistor 3
-        |            |                    <v>= nilai tegangan sumber tidak bebas
-        |____________|____________.\033[41mb\033[0m """)
+      + |            |    |               R2 = nilai resistor 2  
+       \033[34m<V>\033[0m          \033[36m(R3)\033[0m  | Ix            R3 = nilai resistor 3
+      - |            |    V               <v>= nilai tegangan sumber tidak bebas (dalam unit Ix)
+        |____________|____________.\033[41mb\033[0m      *perhatikan arah arus dan letak positif negatif dari sumber tegangan""")
 
     print(Fore.BLACK+""+Back.WHITE+"")
     print("""
 3. Rangkaian equivalent ketiga""")
     print(Style.RESET_ALL)
     print("""
+              X.Vx
          ____\033[36m(R1)\033[0m____\033[34m<V>\033[0m__________.\033[41ma\033[0m      \033[93mKeterangan:\033[0m
         |                   |             R1 = nilai resistor 1
-        |                   |             R2 = nilai resistor 2
-       \033[36m(R2)\033[0m                \033[36m(R3)\033[0m           R3 = nilai resistor 3
-        |                   |             <v>= nilai tegangan sumber tidak bebas
-        |___________________|_____.\033[41mb\033[0m """)
-
+       +|                  +|             R2 = nilai resistor 2
+    Vx \033[36m(R2)\033[0m                \033[36m(R3)\033[0m           R3 = nilai resistor 3
+       -|                  -|             <v>= nilai tegangan sumber tidak 
+        |___________________|_____.\033[41mb\033[0m           bebas """)
+                
     print(Fore.BLACK+""+Back.WHITE+"")
     print("""
 4. Rangkaian equivalent keempat""")
@@ -361,12 +361,13 @@ def program():
                 print(""" 
 ==============Berikut bentuk rangkaian yang akan anda selesaikan============
 ============================================================================
-         ____\033[36m(R1)\033[0m____\033[34m<V>\033[0m__________.\033[41ma\033[0m      \033[93mKeterangan:\033[0m
-        |                   |             R1 = nilai resistor 1
-        |                   |             R2 = nilai resistor 2
-       \033[36m(R2)\033[0m                \033[36m(R3)\033[0m           R3 = nilai resistor 3
-        |                   |             <v>= nilai tegangan sumber tidak bebas
-        |___________________|_____.\033[41mb\033[0m
+                        X.Vx
+             ____\033[36m(R1)\033[0m____\033[34m<V>\033[0m__________.\033[41ma\033[0m      \033[93mKeterangan:\033[0m
+            |                   |             R1 = nilai resistor 1
+           +|                  +|             R2 = nilai resistor 2
+        Vx \033[36m(R2)\033[0m                \033[36m(R3)\033[0m           R3 = nilai resistor 3
+           -|                  -|             <v>= nilai tegangan sumber tidak 
+            |___________________|_____.\033[41mb\033[0m           bebas 
 ============================================================================
 ============================================================================""")
                 print()
