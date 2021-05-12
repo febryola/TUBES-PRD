@@ -270,7 +270,7 @@ def program():
                 R1=float(input("Masukan nilai resistor 1 (ohm): "))
                 R2=float(input("Masukan nilai resistor 2 (ohm): "))
                 R3=float(input("Masukan nilai resistor 3 (ohm): "))
-                print("Untuk voltase, hanya masukkan nilai X pada X*Ix (X berupa bilangan)")
+                print("\033[93mUntuk voltase, hanya masukkan nilai X pada X*Ix (X berupa bilangan)\033[0m")
                 V=float(input("Masukan nilai voltase (volt)  : "))
 
                 # Untuk Mencari Rth maka kita mengasumsi terdapat sumber tegangan independen berupa 1 V pada titik a b
@@ -278,6 +278,7 @@ def program():
                 # Saat nilai arus tersebut didapat, kita dapat mencari nilai Rth rangkaian tersebut
                 # Maka berikut penyelesaiannya
                 Vy = (R1*R3) / (R2*R3-R2*V+R1*R2+R1*R3)   # rumus diturunkan pada laporan
+                Ix = Vy/2
                 I0 = (1-Vy) / R2
                 Rth = 1 / I0
 

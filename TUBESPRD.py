@@ -28,7 +28,8 @@ print("""
                 ██║     ██║██████╔╝██║     ██║   ██║██║   ██║   
                 ██║     ██║██╔══██╗██║     ██║   ██║██║   ██║   
                 ╚██████╗██║██║  ██║╚██████╗╚██████╔╝██║   ██║  
-                ╚═════╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝   ╚═╝  """)               
+                ╚═════╝╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝   ╚═╝  """)     
+
 print(Style.RESET_ALL)#MERESET WARNA PROGRAM
 nama = input("Masukan Nama Anda: ")
 print()
@@ -150,6 +151,7 @@ Kelompok 4 PRD K24 2020/2021:
 \033[34m@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\033[0m
 
     """)
+
 def program():
     print("""\033[92m=======================Silakan Pilih Menu di Bawah ini====================
 **************************************************************************\033[0m""")
@@ -287,25 +289,72 @@ def program():
                     break
 
             elif (pilihan==2):
-                print()
-                print(""" 
+                print("""
 ============Berikut bentuk rangkaian yang akan anda selesaikan==============
 ============================================================================
 
          ____\033[36m(R1)\033[0m____.____\033[36m(R2)\033[0m____.\033[41ma\033[0m      \033[93mKeterangan:\033[0m
         |            |                    R1 = nilai resistor 1
-        |            |                    R2 = nilai resistor 2  
-       \033[34m<V>\033[0m          \033[93m(R3)\033[0m                  R3 = nilai resistor 3
-        |            |                    <v>= nilai tegangan sumber tidak bebas
-        |____________|____________.\033[41mb\033[0m 
+      + |            |    |               R2 = nilai resistor 2  
+       \033[34m<V>\033[0m          \033[36m(R3)\033[0m  | Ix            R3 = nilai resistor 3
+      - |            |    V               <v>= nilai tegangan sumber tidak bebas (dalam unit Ix)
+        |____________|____________.\033[41mb\033[0m      *perhatikan arah arus dan letak positif negatif dari sumber tegangan
+                
 ===========================================================================
 ===========================================================================""")
                 print()
                 R1=float(input("Masukan nilai resistor 1 (ohm): "))
                 R2=float(input("Masukan nilai resistor 2 (ohm): "))
                 R3=float(input("Masukan nilai resistor 3 (ohm): "))
+                print("\033[93mUntuk voltase, hanya masukkan nilai X pada X*Ix (X berupa bilangan)\033[0m")
                 V=float(input("Masukan nilai voltase (volt)  : "))
-                break
+
+                # Untuk Mencari Rth maka kita mengasumsi terdapat sumber tegangan independen berupa 1 V pada titik a b
+                # Lalu kita mencari nilai V di titik antara R1 dan R2 untuk mencari nilai arus pada sumber tegangan independen tersebut
+                # Saat nilai arus tersebut didapat, kita dapat mencari nilai Rth rangkaian tersebut
+                # Maka berikut penyelesaiannya
+                Vy = (R1*R3) / (R2*R3-R2*V+R1*R2+R1*R3)   # rumus diturunkan pada laporan
+                I0 = (1-Vy) / R2
+                Rth = 1 / I0
+
+                # Nilai Vth rangkaian tersebut 0 karena tidak ada sumber tegangan independen
+                Vth = 0
+
+                # Karena nilai Vth nya adalah 0, maka Ith akan bernilai 0 juga
+                Ith = 0
+
+                print("""
+==========Bentuk rangkaian theveninnya akan menjadi seperti berikut=========
+
+                 ______\033[36m(Rth)\033[0m_______.\033[41mn+\033[0m
+                |
+                |
+              \033[93m(Vth)\033[0m
+                |
+                |__________________.\033[41mn-\033[0m
+
+============================================================================
+                """)
+                print("""
+==========Berikut hasil thevenin dari rangkaian equivalent di atas==========""")
+                print()
+                print("Nilai \033[93mR theveninnya\033[0m adalah", Rth, "ohm")
+                print("Nilai \033[36mV theveninnya\033[0m adalah", float(Vth), "volt")
+                print("Nilai \033[91mI theveninnya\033[0m adalah", float(Ith), "Ampere")
+                print()
+                b=input("Apakah Anda ingin melanjutkan program equivalent circuit ini? (Y/N): ")
+                if b=="Y" or b=="y":
+                    print()
+                    program() #Memanggil kembali program utama
+                    break
+
+                elif b=="N" or b=="n":
+                    print("""
+****************************************************************************
+=========================PROGRAM ANDA TELAH SELESAI=========================""")
+                    print(Fore.LIGHTYELLOW_EX+"") #memberikan warna kuning pada huruf byebye
+                    byebye() #Mengeluarkan pesan bye bye ke sistem
+                    break
 
             elif (pilihan==3):
                 print()
