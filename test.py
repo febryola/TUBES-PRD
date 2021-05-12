@@ -486,7 +486,36 @@ def program():
                 #Hitung nilai Ith
                 Ith = Vth/Rth
                 
-                break
+                print("""
+==========Bentuk rangkaian theveninnya akan menjadi seperti berikut=========
+                 ______(Rth)_______.n+
+                |
+                |
+              (Vth)
+                |
+                |__________________.n-
+============================================================================
+                """)
+                print("""
+==========Berikut hasil thevenin dari rangkaian equivalent di atas==========""")
+                print()
+                print("Nilai R theveninnya adalah", Rth, "ohm")
+                print("Nilai V theveninnya adalah", Vth, "volt")
+                print("Nilai I theveninnya adalah", Ith, "Ampere")
+                print()
+                b=input("Apakah Anda ingin melanjutkan program equivalent circuit ini? (Y/N): ")
+                if b=="Y" or b=="y":
+                    print()
+                    program() #Memanggil kembali program utama
+                    break
+
+                elif b=="N" or b=="n":
+                    print("""
+****************************************************************************
+=========================PROGRAM ANDA TELAH SELESAI=========================""")
+                    print(Fore.LIGHTYELLOW_EX+"") #memberikan warna kuning pada huruf byebye
+                    byebye() #Mengeluarkan pesan bye bye ke sistem
+                    break
 
             else:
                 print()
