@@ -325,12 +325,12 @@ def program():
                 print(""" 
 ==============Berikut bentuk rangkaian yang akan anda selesaikan============
 ============================================================================
-
+                         X.Vx
              ____(R1)____<V>__________.a      Keterangan:
             |                   |             R1 = nilai resistor 1
-            |                   |             R2 = nilai resistor 2
-           (R2)                (R3)           R3 = nilai resistor 3
-            |                   |             <v>= nilai tegangan sumber tidak 
+           +|                  +|             R2 = nilai resistor 2
+        Vx (R2)                (R3)           R3 = nilai resistor 3
+           -|                  -|             <v>= nilai tegangan sumber tidak 
             |___________________|_____.b           bebas
                 
 ============================================================================
@@ -339,6 +339,7 @@ def program():
                 R1=float(input("Masukan nilai resistor 1 (ohm): "))
                 R2=float(input("Masukan nilai resistor 2 (ohm): "))
                 R3=float(input("Masukan nilai resistor 3 (ohm): "))
+                print("\033[93mUntuk voltase, hanya masukkan nilai X pada X*Ix (X berupa bilangan)\033[0m")
                 V=float(input("Masukan nilai voltase (volt)  : "))
                 break
 
