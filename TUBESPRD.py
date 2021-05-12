@@ -93,13 +93,13 @@ def rangkaian(): #Fungsi yang memanggil rangkaian
 3. Rangkaian equivalent ketiga""")
     print(Style.RESET_ALL)
     print("""
-              X.Vx
+                    X.Vx
          ____\033[36m(R1)\033[0m____\033[34m<V>\033[0m__________.\033[41ma\033[0m      \033[93mKeterangan:\033[0m
         |                   |             R1 = nilai resistor 1
        +|                  +|             R2 = nilai resistor 2
     Vx \033[36m(R2)\033[0m                \033[36m(R3)\033[0m           R3 = nilai resistor 3
-       -|                  -|             <v>= nilai tegangan sumber tidak 
-        |___________________|_____.\033[41mb\033[0m           bebas """)
+       -|                  -|             <v>= nilai tegangan sumber tidak bebas (dalam unit Vx)
+        |___________________|_____.\033[41mb\033[0m            """)
                 
     print(Fore.BLACK+""+Back.WHITE+"")
     print("""
@@ -362,12 +362,13 @@ def program():
 ==============Berikut bentuk rangkaian yang akan anda selesaikan============
 ============================================================================
                         X.Vx
-             ____\033[36m(R1)\033[0m____\033[34m<V>\033[0m__________.\033[41ma\033[0m      \033[93mKeterangan:\033[0m
-            |                   |             R1 = nilai resistor 1
-           +|                  +|             R2 = nilai resistor 2
-        Vx \033[36m(R2)\033[0m                \033[36m(R3)\033[0m           R3 = nilai resistor 3
-           -|                  -|             <v>= nilai tegangan sumber tidak 
-            |___________________|_____.\033[41mb\033[0m           bebas 
+         ____\033[36m(R1)\033[0m____\033[34m<V>\033[0m__________.\033[41ma\033[0m      \033[93mKeterangan:\033[0m
+        |                   |             R1 = nilai resistor 1
+       +|                  +|             R2 = nilai resistor 2
+    Vx \033[36m(R2)\033[0m                \033[36m(R3)\033[0m           R3 = nilai resistor 3
+       -|                  -|             <v>= nilai tegangan sumber tidak bebas (dalam unit Vx)
+        |___________________|_____.\033[41mb\033[0m            
+                
 ============================================================================
 ============================================================================""")
                 print()
