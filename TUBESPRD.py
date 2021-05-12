@@ -314,6 +314,7 @@ def program():
                 # Saat nilai arus tersebut didapat, kita dapat mencari nilai Rth rangkaian tersebut
                 # Maka berikut penyelesaiannya
                 Vy = (R1*R3) / (R2*R3-R2*V+R1*R2+R1*R3)   # rumus diturunkan pada laporan
+                Ix = Vy/R3
                 I0 = (1-Vy) / R2
                 Rth = 1 / I0
 
