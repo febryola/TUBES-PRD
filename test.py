@@ -458,6 +458,34 @@ def program():
                 V1=float(input("Masukan nilai voltase 1 (volt)   : "))
                 V2=float(input("Masukan nilai voltase 2 (volt)   : "))
                 V3=float(input("Masukan nilai voltase 3 (volt)   : "))
+
+                #Cari Rth
+                #lakukan transformasi Delta -> Y untuk resistor R3, R2, dan R4
+                Rd = R2 + R3 + R4 #Penyebut dari transformasi Delta -> Y
+                Ra = (R3*R2)/Rd   #Resistor antara R2 dan R3
+                Rb = (R3*R4)/Rd   #Resistor antara R4 dan R3
+                Rc = (R2*R4)/Rd   #Resistor antara R2 dan R4
+
+                #Cari besar Rth dengan rangkaian setelah dilakukan transformasi Delta -> Y
+                Rseri1 = Ra + R1
+                Rseri2 = Rb + R5
+                Rpar = ((Rseri1*Rseri2)/(Rseri1 + Rseri2)) + Rc
+                #Hitung nilai Rth
+                Rth = (Rpar*R6)/(Rpar + R6)
+
+                #Cari besar Vth dengan rangkaian setelah dilakuakn transformasi Delta -> Y
+                #Cari nilai i yang mengalir pada resistor 6
+                RR1 = R1 + Ra + Rseri2
+                RR2 = Rseri2 + Rc + R6
+                penyebut = ((V1 + V2)*Rseri2) - ((V3 +V2)*RR1)
+                pembilang = (RR1*RR2) - Rseri2**2
+                i = penyebut/pembilang
+                #Hitung nilai Vth
+                Vth = V3 + i*R6
+
+                #Hitung nilai Ith
+                Ith = Vth/Rth
+                
                 break
 
             else:
