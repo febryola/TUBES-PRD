@@ -343,7 +343,75 @@ def program():
                 R3=float(input("Masukan nilai resistor 3 (ohm): "))
                 print("\033[93mUntuk voltase, hanya masukkan nilai X pada X*Ix (X berupa bilangan)\033[0m")
                 V=float(input("Masukan nilai voltase (volt)  : "))
-                break
+                
+                # Nilai Vth didapatkan dengan cara sebagai berikut:
+                # Mencari nilai dari I dengan menggunakan KVL
+                # -x*Vx + i1*R1 + Vx + i1*R3 = 0
+                # -x*Vx + Vx + i1*R1 + i1*R3 = 0
+                # Vx*(-x + 1) + i1*(R1 + R3) = 0 .... (1)
+                # Karena Vx = i1*R2,
+                # Maka persamaan 1 menjadi
+                # i1*R2*(-x + 1) + i1*(R1 + R3) = 0
+                # i1*(R2*(-x + 1) + (R1 + R3)) = 0
+
+                i1 = 0
+                # Karena nilai dari Vth sama dengan nilai Vab,
+                # Vth = Vab = i1*R3
+
+                Vth = i1*R3
+
+                # Nilai Rth didapatkan dengan mengubah bentuk rangkaian menjadi sebagai berikut:
+                # dengan menggunakan KCL,
+                # Vx = V1
+                # V2 = 1V
+                V1 = R2 / (R1 + R2 - V*R2)
+
+                # dengan menggunakan KCL pada node 2,
+                # i0 = i1 + i2
+                i2 = 1/R3
+                i1 = (1 + V1*(V- 1)) / R1
+                i0 = (1/R3) + ((1 + V1*(V - 1)) / R1)
+
+                # Rth dapat dicari dengan menggunakan rumus R thevenin Rth = 1 / i0
+                # Rth = V2 / i0
+                Rth = 1 / i0
+                # Karna Vth bernilai 0 dengan persamaan
+                # Ith = Vth/Rth, dengan Vth = 0 maka
+                Ith = 0
+                
+                print("""
+==========Bentuk rangkaian theveninnya akan menjadi seperti berikut=========
+
+                 ______(Rth)_______.n+
+                |
+                |
+              (Vth)
+                |
+                |__________________.n-
+
+============================================================================
+                """)
+                print("""
+==========Berikut hasil thevenin dari rangkaian equivalent di atas==========""")
+                print()
+                print("Nilai R theveninnya adalah", Rth, "ohm")
+                print("Nilai V theveninnya adalah", Vth, "volt")
+                print("Nilai I theveninnya adalah", float(Ith), "Ampere")
+                print()
+                b=input("Apakah Anda ingin melanjutkan program equivalent circuit ini? (Y/N): ")
+                if b=="Y" or b=="y":
+                    print()
+                    program() #Memanggil kembali program utama
+                    break
+
+                elif b=="N" or b=="n":
+                    print("""
+****************************************************************************
+=========================PROGRAM ANDA TELAH SELESAI=========================""")
+                    print(Fore.LIGHTYELLOW_EX+"") #memberikan warna kuning pada huruf byebye
+                    byebye() #Mengeluarkan pesan bye bye ke sistem
+                    break
+                
 
             elif (pilihan==4):
                 print()
