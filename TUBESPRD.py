@@ -69,9 +69,9 @@ def rangkaian(): #Fungsi yang memanggil rangkaian
         |            |                     R1 = nilai resistor 1
         |            |                     R2 = nilai resistor 2
         |           \033[36m(R3)\033[0m                   R3 = nilai resistor 3
-        |            |                     R4 = nilai resistor 4
+       +|            |                     R4 = nilai resistor 4
        \033[93m(V)\033[0m           |                     (V)= nilai tegangan sumber bebas
-        |            |
+       -|            |
         |           \033[36m(R4)\033[0m
         |            |
         |____________|____________.\033[41mn+\033[0m  """)
@@ -211,9 +211,9 @@ def program():
         |            |                     R1 = nilai resistor 1
         |            |                     R2 = nilai resistor 2
         |           \033[36m(R3)\033[0m                   R3 = nilai resistor 3
-        |            |                     R4 = nilai resistor 4
+       +|            |                     R4 = nilai resistor 4
        \033[93m(V)\033[0m           |                     (V)= nilai tegangan sumber bebas
-        |            |
+       -|            |
         |           \033[36m(R4)\033[0m
         |            |
         |____________|____________.\033[41mn+\033[0m  
