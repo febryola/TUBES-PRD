@@ -279,17 +279,18 @@ def program():
                 # Lalu kita mencari nilai V di titik antara R1 dan R2 untuk mencari nilai arus pada sumber tegangan independen tersebut
                 # Saat nilai arus tersebut didapat, kita dapat mencari nilai Rth rangkaian tersebut
                 # Maka berikut penyelesaiannya
-                Vy = (R1*R3) / (R2*R3-R2*V+R1*R2+R1*R3)   # rumus diturunkan pada laporan
-                I0 = (1-Vy) / R2
-                Rth = 1 / I0
+                try:
+                    Vy = (R1*R3) / (R2*R3-R2*V+R1*R2+R1*R3)   # rumus diturunkan pada laporan
+                    I0 = (1-Vy) / R2
+                    Rth = 1 / I0
 
                 # Nilai Vth rangkaian tersebut 0 karena tidak ada sumber tegangan independen
-                Vth = 0
+                    Vth = 0
 
                 # Karena nilai Vth nya adalah 0, maka Ith akan bernilai 0 juga
-                Ith = 0
+                    Ith = 0
 
-                print("""
+                    print("""
 ==========Bentuk rangkaian theveninnya akan menjadi seperti berikut=========
 
                  ______(Rth)_______.n+
@@ -301,13 +302,15 @@ def program():
 
 ============================================================================
                 """)
-                print("""
+                    print("""
 ==========Berikut hasil thevenin dari rangkaian equivalent di atas==========""")
-                print()
-                print("Nilai R theveninnya adalah", Rth, "ohm")
-                print("Nilai V theveninnya adalah", float(Vth), "volt")
-                print("Nilai I theveninnya adalah", float(Ith), "Ampere")
-                print()
+                    print()
+                    print("Nilai R theveninnya adalah", Rth, "ohm")
+                    print("Nilai V theveninnya adalah", float(Vth), "volt")
+                    print("Nilai I theveninnya adalah", float(Ith), "Ampere")
+                    print()
+                except ZeroDivisionError:
+                    print("Maaf, rangkaian tersebut tidak dapat dicari nilai theveninnya.")
                 b=input("Apakah Anda ingin melanjutkan program equivalent circuit ini? (Y/N): ")
                 if b=="Y" or b=="y":
                     print()
