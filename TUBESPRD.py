@@ -313,17 +313,18 @@ def program():
                 # Lalu kita mencari nilai V di titik antara R1 dan R2 untuk mencari nilai arus pada sumber tegangan independen tersebut
                 # Saat nilai arus tersebut didapat, kita dapat mencari nilai Rth rangkaian tersebut
                 # Maka berikut penyelesaiannya
-                Vy = (R1*R3) / (R2*R3-R2*V+R1*R2+R1*R3)   # rumus diturunkan pada laporan
-                I0 = (1-Vy) / R2
-                Rth = 1 / I0
+                try:
+                    Vy = (R1*R3) / (R2*R3-R2*V+R1*R2+R1*R3)   # rumus diturunkan pada laporan
+                    I0 = (1-Vy) / R2
+                    Rth = 1 / I0
 
                 # Nilai Vth rangkaian tersebut 0 karena tidak ada sumber tegangan independen
-                Vth = 0
+                    Vth = 0
 
                 # Karena nilai Vth nya adalah 0, maka Ith akan bernilai 0 juga
-                Ith = 0
+                    Ith = 0
 
-                print("""
+                    print("""
 ==========Bentuk rangkaian theveninnya akan menjadi seperti berikut=========
 
                  ______\033[36m(Rth)\033[0m_______.\033[41mn+\033[0m
@@ -335,13 +336,15 @@ def program():
 
 ============================================================================
                 """)
-                print("""
+                    print("""
 ==========Berikut hasil thevenin dari rangkaian equivalent di atas==========""")
-                print()
-                print("Nilai \033[93mR theveninnya\033[0m adalah", Rth, "ohm")
-                print("Nilai \033[36mV theveninnya\033[0m adalah", float(Vth), "volt")
-                print("Nilai \033[91mI theveninnya\033[0m adalah", float(Ith), "Ampere")
-                print()
+                    print()
+                    print("Nilai \033[93mR theveninnya\033[0m adalah", Rth, "ohm")
+                    print("Nilai \033[36mV theveninnya\033[0m adalah", float(Vth), "volt")
+                    print("Nilai \033[91mI theveninnya\033[0m adalah", float(Ith), "Ampere")
+                    print()
+                except ZeroDivisionError:
+                    print("\033[93mMaaf, rangkaian tersebut tidak dapat dicari nilai theveninnya.\033[0m")
                 b=input("Apakah Anda ingin melanjutkan program equivalent circuit ini? (Y/N): ")
                 if b=="Y" or b=="y":
                     print()
@@ -387,33 +390,33 @@ def program():
                 # Maka persamaan 1 menjadi
                 # i1*R2*(-x + 1) + i1*(R1 + R3) = 0
                 # i1*(R2*(-x + 1) + (R1 + R3)) = 0
+                try:
+                    i1 = 0
+                    # Karena nilai dari Vth sama dengan nilai Vab,
+                    # Vth = Vab = -i1*R3
 
-                i1 = 0
-                # Karena nilai dari Vth sama dengan nilai Vab,
-                # Vth = Vab = -i1*R3
+                    Vth = -i1*R3
 
-                Vth = -i1*R3
+                    # Nilai Rth didapatkan dengan mengubah bentuk rangkaian menjadi sebagai berikut:
+                    # dengan menggunakan KCL,
+                    # Vx = V1
+                    # V2 = 1V
+                    V1 = R2 / (R1 + R2 - V*R2)
 
-                # Nilai Rth didapatkan dengan mengubah bentuk rangkaian menjadi sebagai berikut:
-                # dengan menggunakan KCL,
-                # Vx = V1
-                # V2 = 1V
-                V1 = R2 / (R1 + R2 - V*R2)
+                    # dengan menggunakan KCL pada node 2,
+                    # i0 = i1 + i2
+                    i2 = 1/R3
+                    i1 = (1 + V1*(V- 1)) / R1
+                    i0 = (1/R3) + ((1 + V1*(V - 1)) / R1)
 
-                # dengan menggunakan KCL pada node 2,
-                # i0 = i1 + i2
-                i2 = 1/R3
-                i1 = (1 + V1*(V- 1)) / R1
-                i0 = (1/R3) + ((1 + V1*(V - 1)) / R1)
-
-                # Rth dapat dicari dengan menggunakan rumus R thevenin Rth = 1 / i0
-                # Rth = V2 / i0
-                Rth = 1 / i0
-                # Karna Vth bernilai 0 dengan persamaan
-                # Ith = Vth/Rth, dengan Vth = 0 maka
-                Ith = 0
-                
-                print("""
+                    # Rth dapat dicari dengan menggunakan rumus R thevenin Rth = 1 / i0
+                    # Rth = V2 / i0
+                    Rth = 1 / i0
+                    # Karna Vth bernilai 0 dengan persamaan
+                    # Ith = Vth/Rth, dengan Vth = 0 maka
+                    Ith = 0
+                    
+                    print("""
 ==========Bentuk rangkaian theveninnya akan menjadi seperti berikut=========
 
                  ______\033[36m(Rth)\033[0m_______.\033[41mn+\033[0m
@@ -425,13 +428,15 @@ def program():
 
 ============================================================================
                 """)
-                print("""
+                    print("""
 ==========Berikut hasil thevenin dari rangkaian equivalent di atas==========""")
-                print()
-                print("Nilai \033[93mR theveninnya\033[0m adalah", Rth, "ohm")
-                print("Nilai \033[36mV theveninnya\033[0m adalah", Vth, "volt")
-                print("Nilai \033[91mI theveninnya\033[0m adalah", float(Ith), "Ampere")
-                print()
+                    print()
+                    print("Nilai \033[93mR theveninnya\033[0m adalah", Rth, "ohm")
+                    print("Nilai \033[36mV theveninnya\033[0m adalah", Vth, "volt")
+                    print("Nilai \033[91mI theveninnya\033[0m adalah", float(Ith), "Ampere")
+                    print()
+                except ZeroDivisionError:
+                    print("\033[93mMaaf, rangkaian tersebut tidak dapat dicari nilai theveninnya.\033[0m")
                 b=input("Apakah Anda ingin melanjutkan program equivalent circuit ini? (Y/N): ")
                 if b=="Y" or b=="y":
                     print()
